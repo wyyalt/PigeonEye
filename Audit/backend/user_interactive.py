@@ -35,6 +35,7 @@ class UserShell(object):
             # print(self.user.account.host_user_binds.all())
             while True:
                 host_groups = self.user.account.host_groups.all()
+                #打印主机组
                 for index,group in enumerate(host_groups):
                     print("%s.\t%s[%s]"%(index,group,group.host_user_binds.count()))
 
@@ -53,6 +54,7 @@ class UserShell(object):
 
                     if host_bind_list:
                         while True:
+                            #打印主机
                             for index, host in enumerate(host_bind_list):
                                 print("%s.\t%s" % (index, host))
                             host_num = input("Select Host >>:").strip()
