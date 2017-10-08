@@ -7,10 +7,10 @@ do
     if [ ! -z "$pid" ];
     then
         echo "Start Run Strace......"
-        strace -fp $pid -t -o ssh_audit_$2.log;
+        sudo strace -fp $pid -t -o ssh_audit_$2.log;
         break;
     fi;
-    sleep 2
+    sleep 1
 done;
 
 
