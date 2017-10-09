@@ -46,7 +46,7 @@ def posix_shell(chan,session_obj):
         tty.setraw(sys.stdin.fileno())
         tty.setcbreak(sys.stdin.fileno())
         chan.settimeout(0.0)
-        cmd_str = []
+        cmd_str = ""
         while True:
             r, w, e = select.select([chan, sys.stdin], [], [])
             if chan in r:
@@ -69,7 +69,7 @@ def posix_shell(chan,session_obj):
                     models.AuditLog.objects.create(session_log=session_obj,command=cmd_str)
                     cmd_str = ""
                 else:
-                    cmd_str +=x
+                    cmd_str += x
 
 
                 chan.send(x)
