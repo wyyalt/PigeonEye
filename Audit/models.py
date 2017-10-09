@@ -75,8 +75,14 @@ class AuditLog(models.Model):
     """
     审计日志
     """
+    session_log = models.ForeignKey("SessionLog")
+    command = models.TextField(max_length=1024)
+    start_date = models.DateTimeField(auto_now_add=True)
+    end_date = models.DateTimeField(blank=True, null=True)
+
+
     def __str__(self):
-        pass
+        return "%s-%s-%s-%s"%(self.session_log,self.command,self.start_date,self.end_date)
 
 class Account(models.Model):
     """

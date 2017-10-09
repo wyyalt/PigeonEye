@@ -3,6 +3,9 @@ from django.contrib.auth import authenticate
 import subprocess,random,string
 from django.conf import settings
 from Audit import models
+
+from Audit.backend import ssh_interactive
+
 class UserShell(object):
     """
     用户登录堡垒机后的shell
@@ -65,28 +68,32 @@ class UserShell(object):
                                 host_num = int(host_num)
                                 if host_num >= 0 and host_num < len(host_bind_list):
                                     selected_host = host_bind_list[host_num]
-                                    s = string.ascii_lowercase + string.digits
-                                    random_tag = ''.join(random.sample(s,10))
-                                    session_obj = models.SessionLog.objects.create(account=self.user.account,host_user_bind=selected_host)
-                                    print("Selected Host:%s"% selected_host)
-                                    cmd = "sshpass -p %s /usr/local/openssh/bin/ssh %s@%s -p %s -o StrictHostKeyChecking=no -Z %s "%(
-                                        selected_host.host_user.password,
-                                        selected_host.host_user.username,
-                                        selected_host.host.ip_addr,
-                                        selected_host.host.port,random_tag
-                                    )
-                                    print(cmd)
 
-                                    # 拼接session_tracker
-                                    session_tracker_script = "/bin/sh %s %s %s"%(
-                                        settings.SESSION_TRACKER_SCRIPT,
-                                        random_tag,
-                                        session_obj.id
-                                    )
-                                    print(session_tracker_script)
-                                    # 启动session_tracker
-                                    session_tracker_obj = subprocess.Popen(session_tracker_script,shell=True,stdout=subprocess.PIPE,stderr=subprocess.PIPE)
-                                    ssh_channel = subprocess.run(cmd,shell=True)
-                                    print(session_tracker_obj.stdout.read())    
+                                    ssh_interactive.ssh_session(selected_host,self.user)
+                                    # s = string.ascii_lowercase + string.digits
+                                    # random_tag = ''.join(random.sample(s,10))
+                                    # session_obj = models.SessionLog.objects.create(account=self.user.account,host_user_bind=selected_host)
+                                    # print("Selected Host:%s"% selected_host)
+                                    # cmd = "sshpass -p %s /usr/local/openssh/bin/ssh %s@%s -p %s -o StrictHostKeyChecking=no -Z %s "%(
+                                    #     selected_host.host_user.password,
+                                    #     selected_host.host_user.username,
+                                    #     selected_host.host.ip_addr,
+                                    #     selected_host.host.port,random_tag
+                                    # )
+                                    # print(cmd)
+                                    #
+                                    # # 拼接session_tracker
+                                    # session_tracker_script = "/bin/sh %s %s %s"%(
+                                    #     settings.SESSION_TRACKER_SCRIPT,
+                                    #     random_tag,
+                                    #     session_obj.id
+                                    # )
+                                    # print(session_tracker_script)
+                                    # # 启动session_tracker
+                                    # session_tracker_obj = subprocess.Popen(session_tracker_script,shell=True,stdout=subprocess.PIPE,stderr=subprocess.PIPE)
+                                    # ssh_channel = subprocess.run(cmd,shell=True)
+                                    # print(session_tracker_obj.stdout.read())
                             elif host_num == "back":
                                 break
+                elif choice == "exit":
+                    break

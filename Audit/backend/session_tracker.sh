@@ -1,4 +1,5 @@
 #!bin/bash
+cd $(dirname "$0")
 
 for i in $(seq 1 30);
 do
@@ -7,7 +8,7 @@ do
     if [ ! -z "$pid" ];
     then
         echo "Start Run Strace......"
-        sudo strace -fp $pid -t -o ssh_audit_$2.log;
+        sudo strace -fp $pid -t -o ../log/ssh_audit_$2.log;
         break;
     fi;
     sleep 1
