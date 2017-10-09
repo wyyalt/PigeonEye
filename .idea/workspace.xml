@@ -2,10 +2,823 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7cd4df0a-f94a-4c28-9c2a-04be360e3754" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Audit/migrationsass/0001_initial.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Audit/migrationsass/0002_auto_20171007_1700.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Audit/migrationsass/0003_sessionlog.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Audit/migrationsass/__init__.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Audit/src/openssh-7.6p1/.gitignore" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Audit/src/openssh-7.6p1/.skipped-commit-ids" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Audit/src/openssh-7.6p1/CREDITS" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Audit/src/openssh-7.6p1/ChangeLog" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Audit/src/openssh-7.6p1/INSTALL" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Audit/src/openssh-7.6p1/LICENCE" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Audit/src/openssh-7.6p1/Makefile.in" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Audit/src/openssh-7.6p1/OVERVIEW" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Audit/src/openssh-7.6p1/PROTOCOL" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Audit/src/openssh-7.6p1/PROTOCOL.agent" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Audit/src/openssh-7.6p1/PROTOCOL.certkeys" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Audit/src/openssh-7.6p1/PROTOCOL.chacha20poly1305" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Audit/src/openssh-7.6p1/PROTOCOL.key" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Audit/src/openssh-7.6p1/PROTOCOL.krl" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Audit/src/openssh-7.6p1/PROTOCOL.mux" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Audit/src/openssh-7.6p1/README" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Audit/src/openssh-7.6p1/README.dns" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Audit/src/openssh-7.6p1/README.platform" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Audit/src/openssh-7.6p1/README.privsep" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Audit/src/openssh-7.6p1/README.tun" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Audit/src/openssh-7.6p1/TODO" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Audit/src/openssh-7.6p1/aclocal.m4" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Audit/src/openssh-7.6p1/addrmatch.c" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Audit/src/openssh-7.6p1/atomicio.c" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Audit/src/openssh-7.6p1/atomicio.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Audit/src/openssh-7.6p1/audit-bsm.c" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Audit/src/openssh-7.6p1/audit-linux.c" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Audit/src/openssh-7.6p1/audit.c" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Audit/src/openssh-7.6p1/audit.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Audit/src/openssh-7.6p1/auth-bsdauth.c" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Audit/src/openssh-7.6p1/auth-krb5.c" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Audit/src/openssh-7.6p1/auth-options.c" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Audit/src/openssh-7.6p1/auth-options.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Audit/src/openssh-7.6p1/auth-pam.c" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Audit/src/openssh-7.6p1/auth-pam.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Audit/src/openssh-7.6p1/auth-passwd.c" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Audit/src/openssh-7.6p1/auth-rhosts.c" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Audit/src/openssh-7.6p1/auth-shadow.c" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Audit/src/openssh-7.6p1/auth-sia.c" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Audit/src/openssh-7.6p1/auth-sia.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Audit/src/openssh-7.6p1/auth-skey.c" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Audit/src/openssh-7.6p1/auth.c" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Audit/src/openssh-7.6p1/auth.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Audit/src/openssh-7.6p1/auth2-chall.c" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Audit/src/openssh-7.6p1/auth2-gss.c" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Audit/src/openssh-7.6p1/auth2-hostbased.c" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Audit/src/openssh-7.6p1/auth2-kbdint.c" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Audit/src/openssh-7.6p1/auth2-none.c" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Audit/src/openssh-7.6p1/auth2-passwd.c" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Audit/src/openssh-7.6p1/auth2-pubkey.c" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Audit/src/openssh-7.6p1/auth2.c" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Audit/src/openssh-7.6p1/authfd.c" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Audit/src/openssh-7.6p1/authfd.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Audit/src/openssh-7.6p1/authfile.c" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Audit/src/openssh-7.6p1/authfile.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Audit/src/openssh-7.6p1/bitmap.c" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Audit/src/openssh-7.6p1/bitmap.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Audit/src/openssh-7.6p1/blocks.c" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Audit/src/openssh-7.6p1/bufaux.c" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Audit/src/openssh-7.6p1/bufbn.c" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Audit/src/openssh-7.6p1/bufec.c" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Audit/src/openssh-7.6p1/buffer.c" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Audit/src/openssh-7.6p1/buffer.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Audit/src/openssh-7.6p1/buildpkg.sh.in" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Audit/src/openssh-7.6p1/canohost.c" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Audit/src/openssh-7.6p1/canohost.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Audit/src/openssh-7.6p1/chacha.c" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Audit/src/openssh-7.6p1/chacha.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Audit/src/openssh-7.6p1/channels.c" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Audit/src/openssh-7.6p1/channels.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Audit/src/openssh-7.6p1/cipher-aes.c" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Audit/src/openssh-7.6p1/cipher-aesctr.c" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Audit/src/openssh-7.6p1/cipher-aesctr.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Audit/src/openssh-7.6p1/cipher-chachapoly.c" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Audit/src/openssh-7.6p1/cipher-chachapoly.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Audit/src/openssh-7.6p1/cipher-ctr.c" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Audit/src/openssh-7.6p1/cipher.c" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Audit/src/openssh-7.6p1/cipher.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Audit/src/openssh-7.6p1/cleanup.c" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Audit/src/openssh-7.6p1/clientloop.c" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Audit/src/openssh-7.6p1/clientloop.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Audit/src/openssh-7.6p1/compat.c" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Audit/src/openssh-7.6p1/compat.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Audit/src/openssh-7.6p1/config.guess" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Audit/src/openssh-7.6p1/config.log" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Audit/src/openssh-7.6p1/config.sub" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Audit/src/openssh-7.6p1/configure.ac" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Audit/src/openssh-7.6p1/contrib/README" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Audit/src/openssh-7.6p1/contrib/aix/README" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Audit/src/openssh-7.6p1/contrib/aix/buildbff.sh" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Audit/src/openssh-7.6p1/contrib/aix/inventory.sh" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Audit/src/openssh-7.6p1/contrib/aix/pam.conf" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Audit/src/openssh-7.6p1/contrib/cygwin/README" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Audit/src/openssh-7.6p1/contrib/cygwin/ssh-host-config" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Audit/src/openssh-7.6p1/contrib/cygwin/ssh-user-config" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Audit/src/openssh-7.6p1/contrib/cygwin/sshd-inetd" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Audit/src/openssh-7.6p1/contrib/findssl.sh" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Audit/src/openssh-7.6p1/contrib/gnome-ssh-askpass1.c" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Audit/src/openssh-7.6p1/contrib/gnome-ssh-askpass2.c" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Audit/src/openssh-7.6p1/contrib/hpux/README" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Audit/src/openssh-7.6p1/contrib/hpux/egd" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Audit/src/openssh-7.6p1/contrib/hpux/egd.rc" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Audit/src/openssh-7.6p1/contrib/hpux/sshd.rc" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Audit/src/openssh-7.6p1/contrib/redhat/gnome-ssh-askpass.csh" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Audit/src/openssh-7.6p1/contrib/redhat/gnome-ssh-askpass.sh" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Audit/src/openssh-7.6p1/contrib/redhat/openssh.spec" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Audit/src/openssh-7.6p1/contrib/redhat/sshd.init" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Audit/src/openssh-7.6p1/contrib/redhat/sshd.init.old" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Audit/src/openssh-7.6p1/contrib/redhat/sshd.pam" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Audit/src/openssh-7.6p1/contrib/redhat/sshd.pam.old" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Audit/src/openssh-7.6p1/contrib/solaris/README" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Audit/src/openssh-7.6p1/contrib/ssh-copy-id" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Audit/src/openssh-7.6p1/contrib/ssh-copy-id.1" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Audit/src/openssh-7.6p1/contrib/sshd.pam.freebsd" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Audit/src/openssh-7.6p1/contrib/sshd.pam.generic" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Audit/src/openssh-7.6p1/contrib/suse/openssh.spec" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Audit/src/openssh-7.6p1/contrib/suse/rc.config.sshd" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Audit/src/openssh-7.6p1/contrib/suse/rc.sshd" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Audit/src/openssh-7.6p1/contrib/suse/sysconfig.ssh" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Audit/src/openssh-7.6p1/crc32.c" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Audit/src/openssh-7.6p1/crc32.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Audit/src/openssh-7.6p1/crypto_api.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Audit/src/openssh-7.6p1/defines.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Audit/src/openssh-7.6p1/dh.c" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Audit/src/openssh-7.6p1/dh.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Audit/src/openssh-7.6p1/digest-libc.c" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Audit/src/openssh-7.6p1/digest-openssl.c" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Audit/src/openssh-7.6p1/digest.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Audit/src/openssh-7.6p1/dispatch.c" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Audit/src/openssh-7.6p1/dispatch.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Audit/src/openssh-7.6p1/dns.c" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Audit/src/openssh-7.6p1/dns.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Audit/src/openssh-7.6p1/ed25519.c" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Audit/src/openssh-7.6p1/entropy.c" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Audit/src/openssh-7.6p1/entropy.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Audit/src/openssh-7.6p1/fatal.c" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Audit/src/openssh-7.6p1/fe25519.c" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Audit/src/openssh-7.6p1/fe25519.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Audit/src/openssh-7.6p1/fixalgorithms" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Audit/src/openssh-7.6p1/fixpaths" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Audit/src/openssh-7.6p1/fixprogs" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Audit/src/openssh-7.6p1/ge25519.c" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Audit/src/openssh-7.6p1/ge25519.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Audit/src/openssh-7.6p1/ge25519_base.data" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Audit/src/openssh-7.6p1/groupaccess.c" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Audit/src/openssh-7.6p1/groupaccess.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Audit/src/openssh-7.6p1/gss-genr.c" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Audit/src/openssh-7.6p1/gss-serv-krb5.c" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Audit/src/openssh-7.6p1/gss-serv.c" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Audit/src/openssh-7.6p1/hash.c" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Audit/src/openssh-7.6p1/hmac.c" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Audit/src/openssh-7.6p1/hmac.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Audit/src/openssh-7.6p1/hostfile.c" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Audit/src/openssh-7.6p1/hostfile.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Audit/src/openssh-7.6p1/includes.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Audit/src/openssh-7.6p1/install-sh" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Audit/src/openssh-7.6p1/kex.c" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Audit/src/openssh-7.6p1/kex.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Audit/src/openssh-7.6p1/kexc25519.c" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Audit/src/openssh-7.6p1/kexc25519c.c" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Audit/src/openssh-7.6p1/kexc25519s.c" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Audit/src/openssh-7.6p1/kexdh.c" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Audit/src/openssh-7.6p1/kexdhc.c" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Audit/src/openssh-7.6p1/kexdhs.c" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Audit/src/openssh-7.6p1/kexecdh.c" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Audit/src/openssh-7.6p1/kexecdhc.c" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Audit/src/openssh-7.6p1/kexecdhs.c" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Audit/src/openssh-7.6p1/kexgex.c" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Audit/src/openssh-7.6p1/kexgexc.c" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Audit/src/openssh-7.6p1/kexgexs.c" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Audit/src/openssh-7.6p1/key.c" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Audit/src/openssh-7.6p1/key.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Audit/src/openssh-7.6p1/krl.c" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Audit/src/openssh-7.6p1/krl.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Audit/src/openssh-7.6p1/log.c" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Audit/src/openssh-7.6p1/log.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Audit/src/openssh-7.6p1/loginrec.c" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Audit/src/openssh-7.6p1/loginrec.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Audit/src/openssh-7.6p1/logintest.c" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Audit/src/openssh-7.6p1/mac.c" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Audit/src/openssh-7.6p1/mac.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Audit/src/openssh-7.6p1/match.c" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Audit/src/openssh-7.6p1/match.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Audit/src/openssh-7.6p1/md5crypt.c" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Audit/src/openssh-7.6p1/md5crypt.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Audit/src/openssh-7.6p1/mdoc2man.awk" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Audit/src/openssh-7.6p1/misc.c" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Audit/src/openssh-7.6p1/misc.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Audit/src/openssh-7.6p1/mkinstalldirs" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Audit/src/openssh-7.6p1/moduli" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Audit/src/openssh-7.6p1/moduli.5" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Audit/src/openssh-7.6p1/moduli.c" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Audit/src/openssh-7.6p1/monitor.c" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Audit/src/openssh-7.6p1/monitor.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Audit/src/openssh-7.6p1/monitor_fdpass.c" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Audit/src/openssh-7.6p1/monitor_fdpass.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Audit/src/openssh-7.6p1/monitor_wrap.c" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Audit/src/openssh-7.6p1/monitor_wrap.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Audit/src/openssh-7.6p1/msg.c" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Audit/src/openssh-7.6p1/msg.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Audit/src/openssh-7.6p1/mux.c" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Audit/src/openssh-7.6p1/myproposal.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Audit/src/openssh-7.6p1/nchan.c" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Audit/src/openssh-7.6p1/nchan.ms" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Audit/src/openssh-7.6p1/nchan2.ms" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Audit/src/openssh-7.6p1/opacket.c" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Audit/src/openssh-7.6p1/opacket.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Audit/src/openssh-7.6p1/openbsd-compat/Makefile.in" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Audit/src/openssh-7.6p1/openbsd-compat/arc4random.c" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Audit/src/openssh-7.6p1/openbsd-compat/base64.c" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Audit/src/openssh-7.6p1/openbsd-compat/base64.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Audit/src/openssh-7.6p1/openbsd-compat/basename.c" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Audit/src/openssh-7.6p1/openbsd-compat/bcrypt_pbkdf.c" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Audit/src/openssh-7.6p1/openbsd-compat/bindresvport.c" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Audit/src/openssh-7.6p1/openbsd-compat/blf.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Audit/src/openssh-7.6p1/openbsd-compat/blowfish.c" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Audit/src/openssh-7.6p1/openbsd-compat/bsd-asprintf.c" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Audit/src/openssh-7.6p1/openbsd-compat/bsd-closefrom.c" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Audit/src/openssh-7.6p1/openbsd-compat/bsd-cray.c" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Audit/src/openssh-7.6p1/openbsd-compat/bsd-cray.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Audit/src/openssh-7.6p1/openbsd-compat/bsd-cygwin_util.c" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Audit/src/openssh-7.6p1/openbsd-compat/bsd-cygwin_util.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Audit/src/openssh-7.6p1/openbsd-compat/bsd-err.c" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Audit/src/openssh-7.6p1/openbsd-compat/bsd-getpagesize.c" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Audit/src/openssh-7.6p1/openbsd-compat/bsd-getpeereid.c" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Audit/src/openssh-7.6p1/openbsd-compat/bsd-malloc.c" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Audit/src/openssh-7.6p1/openbsd-compat/bsd-misc.c" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Audit/src/openssh-7.6p1/openbsd-compat/bsd-misc.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Audit/src/openssh-7.6p1/openbsd-compat/bsd-nextstep.c" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Audit/src/openssh-7.6p1/openbsd-compat/bsd-nextstep.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Audit/src/openssh-7.6p1/openbsd-compat/bsd-openpty.c" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Audit/src/openssh-7.6p1/openbsd-compat/bsd-poll.c" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Audit/src/openssh-7.6p1/openbsd-compat/bsd-poll.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Audit/src/openssh-7.6p1/openbsd-compat/bsd-setres_id.c" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Audit/src/openssh-7.6p1/openbsd-compat/bsd-setres_id.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Audit/src/openssh-7.6p1/openbsd-compat/bsd-snprintf.c" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Audit/src/openssh-7.6p1/openbsd-compat/bsd-statvfs.c" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Audit/src/openssh-7.6p1/openbsd-compat/bsd-statvfs.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Audit/src/openssh-7.6p1/openbsd-compat/bsd-waitpid.c" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Audit/src/openssh-7.6p1/openbsd-compat/bsd-waitpid.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Audit/src/openssh-7.6p1/openbsd-compat/chacha_private.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Audit/src/openssh-7.6p1/openbsd-compat/charclass.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Audit/src/openssh-7.6p1/openbsd-compat/daemon.c" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Audit/src/openssh-7.6p1/openbsd-compat/dirname.c" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Audit/src/openssh-7.6p1/openbsd-compat/explicit_bzero.c" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Audit/src/openssh-7.6p1/openbsd-compat/fake-rfc2553.c" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Audit/src/openssh-7.6p1/openbsd-compat/fake-rfc2553.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Audit/src/openssh-7.6p1/openbsd-compat/fmt_scaled.c" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Audit/src/openssh-7.6p1/openbsd-compat/freezero.c" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Audit/src/openssh-7.6p1/openbsd-compat/getcwd.c" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Audit/src/openssh-7.6p1/openbsd-compat/getgrouplist.c" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Audit/src/openssh-7.6p1/openbsd-compat/getopt.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Audit/src/openssh-7.6p1/openbsd-compat/getopt_long.c" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Audit/src/openssh-7.6p1/openbsd-compat/getrrsetbyname-ldns.c" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Audit/src/openssh-7.6p1/openbsd-compat/getrrsetbyname.c" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Audit/src/openssh-7.6p1/openbsd-compat/getrrsetbyname.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Audit/src/openssh-7.6p1/openbsd-compat/glob.c" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Audit/src/openssh-7.6p1/openbsd-compat/glob.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Audit/src/openssh-7.6p1/openbsd-compat/inet_aton.c" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Audit/src/openssh-7.6p1/openbsd-compat/inet_ntoa.c" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Audit/src/openssh-7.6p1/openbsd-compat/inet_ntop.c" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Audit/src/openssh-7.6p1/openbsd-compat/kludge-fd_set.c" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Audit/src/openssh-7.6p1/openbsd-compat/md5.c" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Audit/src/openssh-7.6p1/openbsd-compat/md5.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Audit/src/openssh-7.6p1/openbsd-compat/mktemp.c" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Audit/src/openssh-7.6p1/openbsd-compat/openbsd-compat.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Audit/src/openssh-7.6p1/openbsd-compat/openssl-compat.c" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Audit/src/openssh-7.6p1/openbsd-compat/openssl-compat.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Audit/src/openssh-7.6p1/openbsd-compat/port-aix.c" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Audit/src/openssh-7.6p1/openbsd-compat/port-aix.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Audit/src/openssh-7.6p1/openbsd-compat/port-irix.c" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Audit/src/openssh-7.6p1/openbsd-compat/port-irix.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Audit/src/openssh-7.6p1/openbsd-compat/port-linux.c" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Audit/src/openssh-7.6p1/openbsd-compat/port-linux.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Audit/src/openssh-7.6p1/openbsd-compat/port-solaris.c" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Audit/src/openssh-7.6p1/openbsd-compat/port-solaris.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Audit/src/openssh-7.6p1/openbsd-compat/port-tun.c" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Audit/src/openssh-7.6p1/openbsd-compat/port-tun.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Audit/src/openssh-7.6p1/openbsd-compat/port-uw.c" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Audit/src/openssh-7.6p1/openbsd-compat/port-uw.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Audit/src/openssh-7.6p1/openbsd-compat/pwcache.c" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Audit/src/openssh-7.6p1/openbsd-compat/readpassphrase.c" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Audit/src/openssh-7.6p1/openbsd-compat/readpassphrase.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Audit/src/openssh-7.6p1/openbsd-compat/reallocarray.c" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Audit/src/openssh-7.6p1/openbsd-compat/realpath.c" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Audit/src/openssh-7.6p1/openbsd-compat/recallocarray.c" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Audit/src/openssh-7.6p1/openbsd-compat/regress/Makefile.in" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Audit/src/openssh-7.6p1/openbsd-compat/regress/closefromtest.c" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Audit/src/openssh-7.6p1/openbsd-compat/regress/opensslvertest.c" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Audit/src/openssh-7.6p1/openbsd-compat/regress/snprintftest.c" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Audit/src/openssh-7.6p1/openbsd-compat/regress/strduptest.c" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Audit/src/openssh-7.6p1/openbsd-compat/regress/strtonumtest.c" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Audit/src/openssh-7.6p1/openbsd-compat/rmd160.c" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Audit/src/openssh-7.6p1/openbsd-compat/rmd160.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Audit/src/openssh-7.6p1/openbsd-compat/rresvport.c" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Audit/src/openssh-7.6p1/openbsd-compat/setenv.c" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Audit/src/openssh-7.6p1/openbsd-compat/setproctitle.c" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Audit/src/openssh-7.6p1/openbsd-compat/sha1.c" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Audit/src/openssh-7.6p1/openbsd-compat/sha1.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Audit/src/openssh-7.6p1/openbsd-compat/sha2.c" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Audit/src/openssh-7.6p1/openbsd-compat/sha2.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Audit/src/openssh-7.6p1/openbsd-compat/sigact.c" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Audit/src/openssh-7.6p1/openbsd-compat/sigact.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Audit/src/openssh-7.6p1/openbsd-compat/strcasestr.c" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Audit/src/openssh-7.6p1/openbsd-compat/strlcat.c" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Audit/src/openssh-7.6p1/openbsd-compat/strlcpy.c" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Audit/src/openssh-7.6p1/openbsd-compat/strmode.c" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Audit/src/openssh-7.6p1/openbsd-compat/strnlen.c" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Audit/src/openssh-7.6p1/openbsd-compat/strptime.c" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Audit/src/openssh-7.6p1/openbsd-compat/strsep.c" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Audit/src/openssh-7.6p1/openbsd-compat/strtoll.c" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Audit/src/openssh-7.6p1/openbsd-compat/strtonum.c" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Audit/src/openssh-7.6p1/openbsd-compat/strtoul.c" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Audit/src/openssh-7.6p1/openbsd-compat/strtoull.c" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Audit/src/openssh-7.6p1/openbsd-compat/sys-queue.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Audit/src/openssh-7.6p1/openbsd-compat/sys-tree.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Audit/src/openssh-7.6p1/openbsd-compat/timingsafe_bcmp.c" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Audit/src/openssh-7.6p1/openbsd-compat/vis.c" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Audit/src/openssh-7.6p1/openbsd-compat/vis.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Audit/src/openssh-7.6p1/openbsd-compat/xcrypt.c" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Audit/src/openssh-7.6p1/openssh.xml.in" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Audit/src/openssh-7.6p1/opensshd.init.in" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Audit/src/openssh-7.6p1/packet.c" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Audit/src/openssh-7.6p1/packet.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Audit/src/openssh-7.6p1/pathnames.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Audit/src/openssh-7.6p1/pkcs11.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Audit/src/openssh-7.6p1/platform-misc.c" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Audit/src/openssh-7.6p1/platform-pledge.c" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Audit/src/openssh-7.6p1/platform-tracing.c" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Audit/src/openssh-7.6p1/platform.c" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Audit/src/openssh-7.6p1/platform.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Audit/src/openssh-7.6p1/poly1305.c" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Audit/src/openssh-7.6p1/poly1305.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Audit/src/openssh-7.6p1/progressmeter.c" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Audit/src/openssh-7.6p1/progressmeter.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Audit/src/openssh-7.6p1/readconf.c" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Audit/src/openssh-7.6p1/readconf.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Audit/src/openssh-7.6p1/readpass.c" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Audit/src/openssh-7.6p1/regress/README.regress" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Audit/src/openssh-7.6p1/regress/addrmatch.sh" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Audit/src/openssh-7.6p1/regress/agent-getpeereid.sh" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Audit/src/openssh-7.6p1/regress/agent-pkcs11.sh" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Audit/src/openssh-7.6p1/regress/agent-ptrace.sh" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Audit/src/openssh-7.6p1/regress/agent-timeout.sh" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Audit/src/openssh-7.6p1/regress/agent.sh" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Audit/src/openssh-7.6p1/regress/allow-deny-users.sh" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Audit/src/openssh-7.6p1/regress/authinfo.sh" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Audit/src/openssh-7.6p1/regress/banner.sh" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Audit/src/openssh-7.6p1/regress/broken-pipe.sh" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Audit/src/openssh-7.6p1/regress/brokenkeys.sh" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Audit/src/openssh-7.6p1/regress/cert-file.sh" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Audit/src/openssh-7.6p1/regress/cert-hostkey.sh" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Audit/src/openssh-7.6p1/regress/cert-userkey.sh" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Audit/src/openssh-7.6p1/regress/cfginclude.sh" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Audit/src/openssh-7.6p1/regress/cfgmatch.sh" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Audit/src/openssh-7.6p1/regress/cfgparse.sh" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Audit/src/openssh-7.6p1/regress/check-perm.c" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Audit/src/openssh-7.6p1/regress/cipher-speed.sh" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Audit/src/openssh-7.6p1/regress/conch-ciphers.sh" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Audit/src/openssh-7.6p1/regress/connect-privsep.sh" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Audit/src/openssh-7.6p1/regress/connect.sh" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Audit/src/openssh-7.6p1/regress/dhgex.sh" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Audit/src/openssh-7.6p1/regress/dsa_ssh2.prv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Audit/src/openssh-7.6p1/regress/dsa_ssh2.pub" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Audit/src/openssh-7.6p1/regress/dynamic-forward.sh" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Audit/src/openssh-7.6p1/regress/envpass.sh" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Audit/src/openssh-7.6p1/regress/exit-status.sh" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Audit/src/openssh-7.6p1/regress/forcecommand.sh" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Audit/src/openssh-7.6p1/regress/forward-control.sh" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Audit/src/openssh-7.6p1/regress/forwarding.sh" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Audit/src/openssh-7.6p1/regress/host-expand.sh" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Audit/src/openssh-7.6p1/regress/hostkey-agent.sh" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Audit/src/openssh-7.6p1/regress/hostkey-rotate.sh" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Audit/src/openssh-7.6p1/regress/integrity.sh" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Audit/src/openssh-7.6p1/regress/kextype.sh" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Audit/src/openssh-7.6p1/regress/key-options.sh" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Audit/src/openssh-7.6p1/regress/keygen-change.sh" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Audit/src/openssh-7.6p1/regress/keygen-convert.sh" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Audit/src/openssh-7.6p1/regress/keygen-knownhosts.sh" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Audit/src/openssh-7.6p1/regress/keygen-moduli.sh" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Audit/src/openssh-7.6p1/regress/keys-command.sh" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Audit/src/openssh-7.6p1/regress/keyscan.sh" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Audit/src/openssh-7.6p1/regress/keytype.sh" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Audit/src/openssh-7.6p1/regress/krl.sh" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Audit/src/openssh-7.6p1/regress/limit-keytype.sh" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Audit/src/openssh-7.6p1/regress/localcommand.sh" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Audit/src/openssh-7.6p1/regress/login-timeout.sh" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Audit/src/openssh-7.6p1/regress/misc/fuzz-harness/Makefile" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Audit/src/openssh-7.6p1/regress/misc/fuzz-harness/README" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Audit/src/openssh-7.6p1/regress/misc/fuzz-harness/pubkey_fuzz.cc" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Audit/src/openssh-7.6p1/regress/misc/fuzz-harness/sig_fuzz.cc" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Audit/src/openssh-7.6p1/regress/misc/kexfuzz/README" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Audit/src/openssh-7.6p1/regress/misc/kexfuzz/kexfuzz.c" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Audit/src/openssh-7.6p1/regress/modpipe.c" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Audit/src/openssh-7.6p1/regress/moduli.in" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Audit/src/openssh-7.6p1/regress/multiplex.sh" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Audit/src/openssh-7.6p1/regress/multipubkey.sh" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Audit/src/openssh-7.6p1/regress/netcat.c" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Audit/src/openssh-7.6p1/regress/portnum.sh" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Audit/src/openssh-7.6p1/regress/principals-command.sh" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Audit/src/openssh-7.6p1/regress/proto-mismatch.sh" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Audit/src/openssh-7.6p1/regress/proto-version.sh" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Audit/src/openssh-7.6p1/regress/proxy-connect.sh" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Audit/src/openssh-7.6p1/regress/putty-ciphers.sh" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Audit/src/openssh-7.6p1/regress/putty-kex.sh" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Audit/src/openssh-7.6p1/regress/putty-transfer.sh" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Audit/src/openssh-7.6p1/regress/reconfigure.sh" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Audit/src/openssh-7.6p1/regress/reexec.sh" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Audit/src/openssh-7.6p1/regress/rekey.sh" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Audit/src/openssh-7.6p1/regress/rsa_openssh.prv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Audit/src/openssh-7.6p1/regress/rsa_openssh.pub" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Audit/src/openssh-7.6p1/regress/rsa_ssh2.prv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Audit/src/openssh-7.6p1/regress/scp-ssh-wrapper.sh" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Audit/src/openssh-7.6p1/regress/scp.sh" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Audit/src/openssh-7.6p1/regress/setuid-allowed.c" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Audit/src/openssh-7.6p1/regress/sftp-badcmds.sh" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Audit/src/openssh-7.6p1/regress/sftp-batch.sh" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Audit/src/openssh-7.6p1/regress/sftp-chroot.sh" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Audit/src/openssh-7.6p1/regress/sftp-cmds.sh" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Audit/src/openssh-7.6p1/regress/sftp-glob.sh" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Audit/src/openssh-7.6p1/regress/sftp-perm.sh" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Audit/src/openssh-7.6p1/regress/sftp.sh" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Audit/src/openssh-7.6p1/regress/ssh-com-client.sh" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Audit/src/openssh-7.6p1/regress/ssh-com-keygen.sh" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Audit/src/openssh-7.6p1/regress/ssh-com-sftp.sh" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Audit/src/openssh-7.6p1/regress/ssh-com.sh" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Audit/src/openssh-7.6p1/regress/ssh2putty.sh" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Audit/src/openssh-7.6p1/regress/sshcfgparse.sh" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Audit/src/openssh-7.6p1/regress/sshd-log-wrapper.sh" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Audit/src/openssh-7.6p1/regress/stderr-after-eof.sh" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Audit/src/openssh-7.6p1/regress/stderr-data.sh" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Audit/src/openssh-7.6p1/regress/t11.ok" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Audit/src/openssh-7.6p1/regress/t4.ok" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Audit/src/openssh-7.6p1/regress/t5.ok" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Audit/src/openssh-7.6p1/regress/test-exec.sh" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Audit/src/openssh-7.6p1/regress/transfer.sh" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Audit/src/openssh-7.6p1/regress/try-ciphers.sh" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Audit/src/openssh-7.6p1/regress/unittests/Makefile.inc" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Audit/src/openssh-7.6p1/regress/unittests/bitmap/tests.c" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Audit/src/openssh-7.6p1/regress/unittests/conversion/tests.c" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Audit/src/openssh-7.6p1/regress/unittests/hostkeys/mktestdata.sh" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Audit/src/openssh-7.6p1/regress/unittests/hostkeys/test_iterate.c" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Audit/src/openssh-7.6p1/regress/unittests/hostkeys/testdata/dsa_1.pub" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Audit/src/openssh-7.6p1/regress/unittests/hostkeys/testdata/dsa_2.pub" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Audit/src/openssh-7.6p1/regress/unittests/hostkeys/testdata/dsa_3.pub" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Audit/src/openssh-7.6p1/regress/unittests/hostkeys/testdata/dsa_4.pub" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Audit/src/openssh-7.6p1/regress/unittests/hostkeys/testdata/dsa_5.pub" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Audit/src/openssh-7.6p1/regress/unittests/hostkeys/testdata/dsa_6.pub" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Audit/src/openssh-7.6p1/regress/unittests/hostkeys/testdata/ecdsa_1.pub" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Audit/src/openssh-7.6p1/regress/unittests/hostkeys/testdata/ecdsa_2.pub" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Audit/src/openssh-7.6p1/regress/unittests/hostkeys/testdata/ecdsa_3.pub" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Audit/src/openssh-7.6p1/regress/unittests/hostkeys/testdata/ecdsa_4.pub" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Audit/src/openssh-7.6p1/regress/unittests/hostkeys/testdata/ecdsa_5.pub" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Audit/src/openssh-7.6p1/regress/unittests/hostkeys/testdata/ecdsa_6.pub" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Audit/src/openssh-7.6p1/regress/unittests/hostkeys/testdata/ed25519_1.pub" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Audit/src/openssh-7.6p1/regress/unittests/hostkeys/testdata/ed25519_2.pub" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Audit/src/openssh-7.6p1/regress/unittests/hostkeys/testdata/ed25519_3.pub" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Audit/src/openssh-7.6p1/regress/unittests/hostkeys/testdata/ed25519_4.pub" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Audit/src/openssh-7.6p1/regress/unittests/hostkeys/testdata/ed25519_5.pub" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Audit/src/openssh-7.6p1/regress/unittests/hostkeys/testdata/ed25519_6.pub" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Audit/src/openssh-7.6p1/regress/unittests/hostkeys/testdata/known_hosts" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Audit/src/openssh-7.6p1/regress/unittests/hostkeys/testdata/rsa1_1.pub" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Audit/src/openssh-7.6p1/regress/unittests/hostkeys/testdata/rsa1_2.pub" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Audit/src/openssh-7.6p1/regress/unittests/hostkeys/testdata/rsa1_3.pub" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Audit/src/openssh-7.6p1/regress/unittests/hostkeys/testdata/rsa1_4.pub" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Audit/src/openssh-7.6p1/regress/unittests/hostkeys/testdata/rsa1_5.pub" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Audit/src/openssh-7.6p1/regress/unittests/hostkeys/testdata/rsa1_6.pub" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Audit/src/openssh-7.6p1/regress/unittests/hostkeys/testdata/rsa_1.pub" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Audit/src/openssh-7.6p1/regress/unittests/hostkeys/testdata/rsa_2.pub" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Audit/src/openssh-7.6p1/regress/unittests/hostkeys/testdata/rsa_3.pub" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Audit/src/openssh-7.6p1/regress/unittests/hostkeys/testdata/rsa_4.pub" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Audit/src/openssh-7.6p1/regress/unittests/hostkeys/testdata/rsa_5.pub" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Audit/src/openssh-7.6p1/regress/unittests/hostkeys/testdata/rsa_6.pub" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Audit/src/openssh-7.6p1/regress/unittests/hostkeys/tests.c" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Audit/src/openssh-7.6p1/regress/unittests/kex/test_kex.c" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Audit/src/openssh-7.6p1/regress/unittests/kex/tests.c" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Audit/src/openssh-7.6p1/regress/unittests/match/tests.c" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Audit/src/openssh-7.6p1/regress/unittests/sshbuf/test_sshbuf.c" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Audit/src/openssh-7.6p1/regress/unittests/sshbuf/test_sshbuf_fixed.c" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Audit/src/openssh-7.6p1/regress/unittests/sshbuf/test_sshbuf_fuzz.c" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Audit/src/openssh-7.6p1/regress/unittests/sshbuf/test_sshbuf_getput_basic.c" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Audit/src/openssh-7.6p1/regress/unittests/sshbuf/test_sshbuf_getput_crypto.c" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Audit/src/openssh-7.6p1/regress/unittests/sshbuf/test_sshbuf_getput_fuzz.c" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Audit/src/openssh-7.6p1/regress/unittests/sshbuf/test_sshbuf_misc.c" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Audit/src/openssh-7.6p1/regress/unittests/sshbuf/tests.c" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Audit/src/openssh-7.6p1/regress/unittests/sshkey/common.c" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Audit/src/openssh-7.6p1/regress/unittests/sshkey/common.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Audit/src/openssh-7.6p1/regress/unittests/sshkey/mktestdata.sh" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Audit/src/openssh-7.6p1/regress/unittests/sshkey/test_file.c" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Audit/src/openssh-7.6p1/regress/unittests/sshkey/test_fuzz.c" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Audit/src/openssh-7.6p1/regress/unittests/sshkey/test_sshkey.c" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Audit/src/openssh-7.6p1/regress/unittests/sshkey/testdata/dsa_1" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Audit/src/openssh-7.6p1/regress/unittests/sshkey/testdata/dsa_1-cert.fp" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Audit/src/openssh-7.6p1/regress/unittests/sshkey/testdata/dsa_1-cert.pub" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Audit/src/openssh-7.6p1/regress/unittests/sshkey/testdata/dsa_1.fp" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Audit/src/openssh-7.6p1/regress/unittests/sshkey/testdata/dsa_1.fp.bb" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Audit/src/openssh-7.6p1/regress/unittests/sshkey/testdata/dsa_1.param.g" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Audit/src/openssh-7.6p1/regress/unittests/sshkey/testdata/dsa_1.param.priv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Audit/src/openssh-7.6p1/regress/unittests/sshkey/testdata/dsa_1.param.pub" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Audit/src/openssh-7.6p1/regress/unittests/sshkey/testdata/dsa_1.pub" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Audit/src/openssh-7.6p1/regress/unittests/sshkey/testdata/dsa_1_pw" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Audit/src/openssh-7.6p1/regress/unittests/sshkey/testdata/dsa_2" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Audit/src/openssh-7.6p1/regress/unittests/sshkey/testdata/dsa_2.fp" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Audit/src/openssh-7.6p1/regress/unittests/sshkey/testdata/dsa_2.fp.bb" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Audit/src/openssh-7.6p1/regress/unittests/sshkey/testdata/dsa_2.pub" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Audit/src/openssh-7.6p1/regress/unittests/sshkey/testdata/dsa_n" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Audit/src/openssh-7.6p1/regress/unittests/sshkey/testdata/dsa_n_pw" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Audit/src/openssh-7.6p1/regress/unittests/sshkey/testdata/ecdsa_1" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Audit/src/openssh-7.6p1/regress/unittests/sshkey/testdata/ecdsa_1-cert.fp" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Audit/src/openssh-7.6p1/regress/unittests/sshkey/testdata/ecdsa_1-cert.pub" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Audit/src/openssh-7.6p1/regress/unittests/sshkey/testdata/ecdsa_1.fp" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Audit/src/openssh-7.6p1/regress/unittests/sshkey/testdata/ecdsa_1.fp.bb" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Audit/src/openssh-7.6p1/regress/unittests/sshkey/testdata/ecdsa_1.param.curve" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Audit/src/openssh-7.6p1/regress/unittests/sshkey/testdata/ecdsa_1.param.priv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Audit/src/openssh-7.6p1/regress/unittests/sshkey/testdata/ecdsa_1.param.pub" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Audit/src/openssh-7.6p1/regress/unittests/sshkey/testdata/ecdsa_1.pub" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Audit/src/openssh-7.6p1/regress/unittests/sshkey/testdata/ecdsa_1_pw" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Audit/src/openssh-7.6p1/regress/unittests/sshkey/testdata/ecdsa_2" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Audit/src/openssh-7.6p1/regress/unittests/sshkey/testdata/ecdsa_2.fp" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Audit/src/openssh-7.6p1/regress/unittests/sshkey/testdata/ecdsa_2.fp.bb" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Audit/src/openssh-7.6p1/regress/unittests/sshkey/testdata/ecdsa_2.param.curve" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Audit/src/openssh-7.6p1/regress/unittests/sshkey/testdata/ecdsa_2.param.priv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Audit/src/openssh-7.6p1/regress/unittests/sshkey/testdata/ecdsa_2.param.pub" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Audit/src/openssh-7.6p1/regress/unittests/sshkey/testdata/ecdsa_2.pub" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Audit/src/openssh-7.6p1/regress/unittests/sshkey/testdata/ecdsa_n" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Audit/src/openssh-7.6p1/regress/unittests/sshkey/testdata/ecdsa_n_pw" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Audit/src/openssh-7.6p1/regress/unittests/sshkey/testdata/ed25519_1" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Audit/src/openssh-7.6p1/regress/unittests/sshkey/testdata/ed25519_1-cert.fp" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Audit/src/openssh-7.6p1/regress/unittests/sshkey/testdata/ed25519_1-cert.pub" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Audit/src/openssh-7.6p1/regress/unittests/sshkey/testdata/ed25519_1.fp" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Audit/src/openssh-7.6p1/regress/unittests/sshkey/testdata/ed25519_1.fp.bb" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Audit/src/openssh-7.6p1/regress/unittests/sshkey/testdata/ed25519_1.pub" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Audit/src/openssh-7.6p1/regress/unittests/sshkey/testdata/ed25519_1_pw" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Audit/src/openssh-7.6p1/regress/unittests/sshkey/testdata/ed25519_2" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Audit/src/openssh-7.6p1/regress/unittests/sshkey/testdata/ed25519_2.fp" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Audit/src/openssh-7.6p1/regress/unittests/sshkey/testdata/ed25519_2.fp.bb" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Audit/src/openssh-7.6p1/regress/unittests/sshkey/testdata/ed25519_2.pub" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Audit/src/openssh-7.6p1/regress/unittests/sshkey/testdata/pw" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Audit/src/openssh-7.6p1/regress/unittests/sshkey/testdata/rsa1_1" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Audit/src/openssh-7.6p1/regress/unittests/sshkey/testdata/rsa1_1.fp" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Audit/src/openssh-7.6p1/regress/unittests/sshkey/testdata/rsa1_1.fp.bb" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Audit/src/openssh-7.6p1/regress/unittests/sshkey/testdata/rsa1_1.param.n" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Audit/src/openssh-7.6p1/regress/unittests/sshkey/testdata/rsa1_1.pub" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Audit/src/openssh-7.6p1/regress/unittests/sshkey/testdata/rsa1_1_pw" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Audit/src/openssh-7.6p1/regress/unittests/sshkey/testdata/rsa1_2" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Audit/src/openssh-7.6p1/regress/unittests/sshkey/testdata/rsa1_2.fp" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Audit/src/openssh-7.6p1/regress/unittests/sshkey/testdata/rsa1_2.fp.bb" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Audit/src/openssh-7.6p1/regress/unittests/sshkey/testdata/rsa1_2.param.n" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Audit/src/openssh-7.6p1/regress/unittests/sshkey/testdata/rsa1_2.pub" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Audit/src/openssh-7.6p1/regress/unittests/sshkey/testdata/rsa_1" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Audit/src/openssh-7.6p1/regress/unittests/sshkey/testdata/rsa_1-cert.fp" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Audit/src/openssh-7.6p1/regress/unittests/sshkey/testdata/rsa_1-cert.pub" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Audit/src/openssh-7.6p1/regress/unittests/sshkey/testdata/rsa_1.fp" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Audit/src/openssh-7.6p1/regress/unittests/sshkey/testdata/rsa_1.fp.bb" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Audit/src/openssh-7.6p1/regress/unittests/sshkey/testdata/rsa_1.param.n" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Audit/src/openssh-7.6p1/regress/unittests/sshkey/testdata/rsa_1.param.p" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Audit/src/openssh-7.6p1/regress/unittests/sshkey/testdata/rsa_1.param.q" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Audit/src/openssh-7.6p1/regress/unittests/sshkey/testdata/rsa_1.pub" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Audit/src/openssh-7.6p1/regress/unittests/sshkey/testdata/rsa_1_pw" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Audit/src/openssh-7.6p1/regress/unittests/sshkey/testdata/rsa_2" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Audit/src/openssh-7.6p1/regress/unittests/sshkey/testdata/rsa_2.fp" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Audit/src/openssh-7.6p1/regress/unittests/sshkey/testdata/rsa_2.fp.bb" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Audit/src/openssh-7.6p1/regress/unittests/sshkey/testdata/rsa_2.param.n" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Audit/src/openssh-7.6p1/regress/unittests/sshkey/testdata/rsa_2.param.p" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Audit/src/openssh-7.6p1/regress/unittests/sshkey/testdata/rsa_2.param.q" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Audit/src/openssh-7.6p1/regress/unittests/sshkey/testdata/rsa_2.pub" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Audit/src/openssh-7.6p1/regress/unittests/sshkey/testdata/rsa_n" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Audit/src/openssh-7.6p1/regress/unittests/sshkey/testdata/rsa_n_pw" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Audit/src/openssh-7.6p1/regress/unittests/sshkey/tests.c" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Audit/src/openssh-7.6p1/regress/unittests/test_helper/fuzz.c" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Audit/src/openssh-7.6p1/regress/unittests/test_helper/test_helper.c" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Audit/src/openssh-7.6p1/regress/unittests/test_helper/test_helper.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Audit/src/openssh-7.6p1/regress/unittests/utf8/tests.c" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Audit/src/openssh-7.6p1/regress/valgrind-unit.sh" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Audit/src/openssh-7.6p1/regress/yes-head.sh" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Audit/src/openssh-7.6p1/rijndael.c" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Audit/src/openssh-7.6p1/rijndael.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Audit/src/openssh-7.6p1/sandbox-capsicum.c" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Audit/src/openssh-7.6p1/sandbox-darwin.c" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Audit/src/openssh-7.6p1/sandbox-null.c" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Audit/src/openssh-7.6p1/sandbox-pledge.c" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Audit/src/openssh-7.6p1/sandbox-rlimit.c" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Audit/src/openssh-7.6p1/sandbox-seccomp-filter.c" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Audit/src/openssh-7.6p1/sandbox-solaris.c" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Audit/src/openssh-7.6p1/sandbox-systrace.c" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Audit/src/openssh-7.6p1/sc25519.c" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Audit/src/openssh-7.6p1/sc25519.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Audit/src/openssh-7.6p1/scp.1" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Audit/src/openssh-7.6p1/scp.c" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Audit/src/openssh-7.6p1/servconf.c" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Audit/src/openssh-7.6p1/servconf.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Audit/src/openssh-7.6p1/serverloop.c" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Audit/src/openssh-7.6p1/serverloop.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Audit/src/openssh-7.6p1/session.c" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Audit/src/openssh-7.6p1/session.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Audit/src/openssh-7.6p1/sftp-client.c" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Audit/src/openssh-7.6p1/sftp-client.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Audit/src/openssh-7.6p1/sftp-common.c" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Audit/src/openssh-7.6p1/sftp-common.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Audit/src/openssh-7.6p1/sftp-glob.c" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Audit/src/openssh-7.6p1/sftp-server-main.c" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Audit/src/openssh-7.6p1/sftp-server.8" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Audit/src/openssh-7.6p1/sftp-server.c" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Audit/src/openssh-7.6p1/sftp.1" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Audit/src/openssh-7.6p1/sftp.c" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Audit/src/openssh-7.6p1/sftp.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Audit/src/openssh-7.6p1/smult_curve25519_ref.c" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Audit/src/openssh-7.6p1/ssh-add.1" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Audit/src/openssh-7.6p1/ssh-add.c" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Audit/src/openssh-7.6p1/ssh-agent.1" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Audit/src/openssh-7.6p1/ssh-agent.c" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Audit/src/openssh-7.6p1/ssh-dss.c" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Audit/src/openssh-7.6p1/ssh-ecdsa.c" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Audit/src/openssh-7.6p1/ssh-ed25519.c" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Audit/src/openssh-7.6p1/ssh-gss.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Audit/src/openssh-7.6p1/ssh-keygen.1" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Audit/src/openssh-7.6p1/ssh-keygen.c" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Audit/src/openssh-7.6p1/ssh-keyscan.1" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Audit/src/openssh-7.6p1/ssh-keyscan.c" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Audit/src/openssh-7.6p1/ssh-keysign.8" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Audit/src/openssh-7.6p1/ssh-keysign.c" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Audit/src/openssh-7.6p1/ssh-pkcs11-client.c" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Audit/src/openssh-7.6p1/ssh-pkcs11-helper.8" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Audit/src/openssh-7.6p1/ssh-pkcs11-helper.c" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Audit/src/openssh-7.6p1/ssh-pkcs11.c" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Audit/src/openssh-7.6p1/ssh-pkcs11.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Audit/src/openssh-7.6p1/ssh-rsa.c" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Audit/src/openssh-7.6p1/ssh-sandbox.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Audit/src/openssh-7.6p1/ssh.1" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Audit/src/openssh-7.6p1/ssh.c" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Audit/src/openssh-7.6p1/ssh.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Audit/src/openssh-7.6p1/ssh2.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Audit/src/openssh-7.6p1/ssh_api.c" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Audit/src/openssh-7.6p1/ssh_api.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Audit/src/openssh-7.6p1/ssh_config" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Audit/src/openssh-7.6p1/ssh_config.5" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Audit/src/openssh-7.6p1/sshbuf-getput-basic.c" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Audit/src/openssh-7.6p1/sshbuf-getput-crypto.c" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Audit/src/openssh-7.6p1/sshbuf-misc.c" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Audit/src/openssh-7.6p1/sshbuf.c" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Audit/src/openssh-7.6p1/sshbuf.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Audit/src/openssh-7.6p1/sshconnect.c" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Audit/src/openssh-7.6p1/sshconnect.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Audit/src/openssh-7.6p1/sshconnect2.c" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Audit/src/openssh-7.6p1/sshd.8" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Audit/src/openssh-7.6p1/sshd.c" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Audit/src/openssh-7.6p1/sshd_config" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Audit/src/openssh-7.6p1/sshd_config.5" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Audit/src/openssh-7.6p1/ssherr.c" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Audit/src/openssh-7.6p1/ssherr.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Audit/src/openssh-7.6p1/sshkey.c" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Audit/src/openssh-7.6p1/sshkey.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Audit/src/openssh-7.6p1/sshlogin.c" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Audit/src/openssh-7.6p1/sshlogin.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Audit/src/openssh-7.6p1/sshpty.c" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Audit/src/openssh-7.6p1/sshpty.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Audit/src/openssh-7.6p1/sshtty.c" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Audit/src/openssh-7.6p1/survey.sh.in" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Audit/src/openssh-7.6p1/ttymodes.c" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Audit/src/openssh-7.6p1/ttymodes.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Audit/src/openssh-7.6p1/uidswap.c" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Audit/src/openssh-7.6p1/uidswap.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Audit/src/openssh-7.6p1/umac.c" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Audit/src/openssh-7.6p1/umac.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Audit/src/openssh-7.6p1/utf8.c" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Audit/src/openssh-7.6p1/utf8.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Audit/src/openssh-7.6p1/uuencode.c" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Audit/src/openssh-7.6p1/uuencode.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Audit/src/openssh-7.6p1/verify.c" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Audit/src/openssh-7.6p1/version.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Audit/src/openssh-7.6p1/xmalloc.c" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Audit/src/openssh-7.6p1/xmalloc.h" afterPath="" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Audit/src/paramiko-master/.bzrignore" afterPath="$PROJECT_DIR$/src/paramiko-master/.bzrignore" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Audit/src/paramiko-master/.gitignore" afterPath="$PROJECT_DIR$/src/paramiko-master/.gitignore" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Audit/src/paramiko-master/.travis.yml" afterPath="$PROJECT_DIR$/src/paramiko-master/.travis.yml" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Audit/src/paramiko-master/LICENSE" afterPath="$PROJECT_DIR$/src/paramiko-master/LICENSE" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Audit/src/paramiko-master/MANIFEST.in" afterPath="$PROJECT_DIR$/src/paramiko-master/MANIFEST.in" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Audit/src/paramiko-master/NEWS" afterPath="$PROJECT_DIR$/src/paramiko-master/NEWS" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Audit/src/paramiko-master/NOTES" afterPath="$PROJECT_DIR$/src/paramiko-master/NOTES" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Audit/src/paramiko-master/README.rst" afterPath="$PROJECT_DIR$/src/paramiko-master/README.rst" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Audit/src/paramiko-master/TODO" afterPath="$PROJECT_DIR$/src/paramiko-master/TODO" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Audit/src/paramiko-master/codecov.yml" afterPath="$PROJECT_DIR$/src/paramiko-master/codecov.yml" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Audit/src/paramiko-master/demos/demo.py" afterPath="$PROJECT_DIR$/src/paramiko-master/demos/demo.py" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Audit/src/paramiko-master/demos/demo_keygen.py" afterPath="$PROJECT_DIR$/src/paramiko-master/demos/demo_keygen.py" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Audit/src/paramiko-master/demos/demo_server.py" afterPath="$PROJECT_DIR$/src/paramiko-master/demos/demo_server.py" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Audit/src/paramiko-master/demos/demo_sftp.py" afterPath="$PROJECT_DIR$/src/paramiko-master/demos/demo_sftp.py" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Audit/src/paramiko-master/demos/demo_simple.py" afterPath="$PROJECT_DIR$/src/paramiko-master/demos/demo_simple.py" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Audit/src/paramiko-master/demos/forward.py" afterPath="$PROJECT_DIR$/src/paramiko-master/demos/forward.py" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Audit/src/paramiko-master/demos/interactive.py" afterPath="$PROJECT_DIR$/src/paramiko-master/demos/interactive.py" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Audit/src/paramiko-master/demos/rforward.py" afterPath="$PROJECT_DIR$/src/paramiko-master/demos/rforward.py" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Audit/src/paramiko-master/demos/test_rsa.key" afterPath="$PROJECT_DIR$/src/paramiko-master/tests/test_rsa.key" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Audit/src/paramiko-master/demos/user_rsa_key" afterPath="$PROJECT_DIR$/src/paramiko-master/demos/user_rsa_key" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Audit/src/paramiko-master/demos/user_rsa_key.pub" afterPath="$PROJECT_DIR$/src/paramiko-master/demos/user_rsa_key.pub" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Audit/src/paramiko-master/dev-requirements.txt" afterPath="$PROJECT_DIR$/src/paramiko-master/dev-requirements.txt" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Audit/src/paramiko-master/images/paramiko-banner.png" afterPath="$PROJECT_DIR$/src/paramiko-master/images/paramiko-banner.png" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Audit/src/paramiko-master/images/paramiko-banner.psd" afterPath="$PROJECT_DIR$/src/paramiko-master/images/paramiko-banner.psd" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Audit/src/paramiko-master/images/paramiko.png" afterPath="$PROJECT_DIR$/src/paramiko-master/images/paramiko.png" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Audit/src/paramiko-master/paramiko/__init__.py" afterPath="$PROJECT_DIR$/src/paramiko-master/paramiko/__init__.py" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Audit/src/paramiko-master/paramiko/_version.py" afterPath="$PROJECT_DIR$/src/paramiko-master/paramiko/_version.py" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Audit/src/paramiko-master/paramiko/_winapi.py" afterPath="$PROJECT_DIR$/src/paramiko-master/paramiko/_winapi.py" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Audit/src/paramiko-master/paramiko/agent.py" afterPath="$PROJECT_DIR$/src/paramiko-master/paramiko/agent.py" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Audit/src/paramiko-master/paramiko/auth_handler.py" afterPath="$PROJECT_DIR$/src/paramiko-master/paramiko/auth_handler.py" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Audit/src/paramiko-master/paramiko/ber.py" afterPath="$PROJECT_DIR$/src/paramiko-master/paramiko/ber.py" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Audit/src/paramiko-master/paramiko/buffered_pipe.py" afterPath="$PROJECT_DIR$/src/paramiko-master/paramiko/buffered_pipe.py" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Audit/src/paramiko-master/paramiko/channel.py" afterPath="$PROJECT_DIR$/src/paramiko-master/paramiko/channel.py" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Audit/src/paramiko-master/paramiko/client.py" afterPath="$PROJECT_DIR$/src/paramiko-master/paramiko/client.py" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Audit/src/paramiko-master/paramiko/common.py" afterPath="$PROJECT_DIR$/src/paramiko-master/paramiko/common.py" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Audit/src/paramiko-master/paramiko/compress.py" afterPath="$PROJECT_DIR$/src/paramiko-master/paramiko/compress.py" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Audit/src/paramiko-master/paramiko/config.py" afterPath="$PROJECT_DIR$/src/paramiko-master/paramiko/config.py" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Audit/src/paramiko-master/paramiko/dsskey.py" afterPath="$PROJECT_DIR$/src/paramiko-master/paramiko/dsskey.py" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Audit/src/paramiko-master/paramiko/ecdsakey.py" afterPath="$PROJECT_DIR$/src/paramiko-master/paramiko/ecdsakey.py" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Audit/src/paramiko-master/paramiko/ed25519key.py" afterPath="$PROJECT_DIR$/src/paramiko-master/paramiko/ed25519key.py" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Audit/src/paramiko-master/paramiko/file.py" afterPath="$PROJECT_DIR$/src/paramiko-master/paramiko/file.py" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Audit/src/paramiko-master/paramiko/hostkeys.py" afterPath="$PROJECT_DIR$/src/paramiko-master/paramiko/hostkeys.py" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Audit/src/paramiko-master/paramiko/kex_ecdh_nist.py" afterPath="$PROJECT_DIR$/src/paramiko-master/paramiko/kex_ecdh_nist.py" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Audit/src/paramiko-master/paramiko/kex_gex.py" afterPath="$PROJECT_DIR$/src/paramiko-master/paramiko/kex_gex.py" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Audit/src/paramiko-master/paramiko/kex_group1.py" afterPath="$PROJECT_DIR$/src/paramiko-master/paramiko/kex_group1.py" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Audit/src/paramiko-master/paramiko/kex_group14.py" afterPath="$PROJECT_DIR$/src/paramiko-master/paramiko/kex_group14.py" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Audit/src/paramiko-master/paramiko/kex_gss.py" afterPath="$PROJECT_DIR$/src/paramiko-master/paramiko/kex_gss.py" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Audit/src/paramiko-master/paramiko/message.py" afterPath="$PROJECT_DIR$/src/paramiko-master/paramiko/message.py" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Audit/src/paramiko-master/paramiko/packet.py" afterPath="$PROJECT_DIR$/src/paramiko-master/paramiko/packet.py" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Audit/src/paramiko-master/paramiko/pipe.py" afterPath="$PROJECT_DIR$/src/paramiko-master/paramiko/pipe.py" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Audit/src/paramiko-master/paramiko/pkey.py" afterPath="$PROJECT_DIR$/src/paramiko-master/paramiko/pkey.py" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Audit/src/paramiko-master/paramiko/primes.py" afterPath="$PROJECT_DIR$/src/paramiko-master/paramiko/primes.py" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Audit/src/paramiko-master/paramiko/proxy.py" afterPath="$PROJECT_DIR$/src/paramiko-master/paramiko/proxy.py" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Audit/src/paramiko-master/paramiko/py3compat.py" afterPath="$PROJECT_DIR$/src/paramiko-master/paramiko/py3compat.py" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Audit/src/paramiko-master/paramiko/rsakey.py" afterPath="$PROJECT_DIR$/src/paramiko-master/paramiko/rsakey.py" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Audit/src/paramiko-master/paramiko/server.py" afterPath="$PROJECT_DIR$/src/paramiko-master/paramiko/server.py" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Audit/src/paramiko-master/paramiko/sftp.py" afterPath="$PROJECT_DIR$/src/paramiko-master/paramiko/sftp.py" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Audit/src/paramiko-master/paramiko/sftp_attr.py" afterPath="$PROJECT_DIR$/src/paramiko-master/paramiko/sftp_attr.py" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Audit/src/paramiko-master/paramiko/sftp_client.py" afterPath="$PROJECT_DIR$/src/paramiko-master/paramiko/sftp_client.py" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Audit/src/paramiko-master/paramiko/sftp_file.py" afterPath="$PROJECT_DIR$/src/paramiko-master/paramiko/sftp_file.py" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Audit/src/paramiko-master/paramiko/sftp_handle.py" afterPath="$PROJECT_DIR$/src/paramiko-master/paramiko/sftp_handle.py" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Audit/src/paramiko-master/paramiko/sftp_server.py" afterPath="$PROJECT_DIR$/src/paramiko-master/paramiko/sftp_server.py" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Audit/src/paramiko-master/paramiko/sftp_si.py" afterPath="$PROJECT_DIR$/src/paramiko-master/paramiko/sftp_si.py" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Audit/src/paramiko-master/paramiko/ssh_exception.py" afterPath="$PROJECT_DIR$/src/paramiko-master/paramiko/ssh_exception.py" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Audit/src/paramiko-master/paramiko/ssh_gss.py" afterPath="$PROJECT_DIR$/src/paramiko-master/paramiko/ssh_gss.py" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Audit/src/paramiko-master/paramiko/transport.py" afterPath="$PROJECT_DIR$/src/paramiko-master/paramiko/transport.py" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Audit/src/paramiko-master/paramiko/util.py" afterPath="$PROJECT_DIR$/src/paramiko-master/paramiko/util.py" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Audit/src/paramiko-master/paramiko/win_pageant.py" afterPath="$PROJECT_DIR$/src/paramiko-master/paramiko/win_pageant.py" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Audit/src/paramiko-master/setup.cfg" afterPath="$PROJECT_DIR$/src/paramiko-master/setup.cfg" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Audit/src/paramiko-master/setup.py" afterPath="$PROJECT_DIR$/src/paramiko-master/setup.py" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Audit/src/paramiko-master/setup_helper.py" afterPath="$PROJECT_DIR$/src/paramiko-master/setup_helper.py" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Audit/src/paramiko-master/sites/docs/api/agent.rst" afterPath="$PROJECT_DIR$/src/paramiko-master/sites/docs/api/agent.rst" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Audit/src/paramiko-master/sites/docs/api/buffered_pipe.rst" afterPath="$PROJECT_DIR$/src/paramiko-master/sites/docs/api/buffered_pipe.rst" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Audit/src/paramiko-master/sites/docs/api/channel.rst" afterPath="$PROJECT_DIR$/src/paramiko-master/sites/docs/api/channel.rst" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Audit/src/paramiko-master/sites/docs/api/client.rst" afterPath="$PROJECT_DIR$/src/paramiko-master/sites/docs/api/client.rst" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Audit/src/paramiko-master/sites/docs/api/config.rst" afterPath="$PROJECT_DIR$/src/paramiko-master/sites/docs/api/config.rst" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Audit/src/paramiko-master/sites/docs/api/file.rst" afterPath="$PROJECT_DIR$/src/paramiko-master/sites/docs/api/file.rst" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Audit/src/paramiko-master/sites/docs/api/hostkeys.rst" afterPath="$PROJECT_DIR$/src/paramiko-master/sites/docs/api/hostkeys.rst" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Audit/src/paramiko-master/sites/docs/api/kex_gss.rst" afterPath="$PROJECT_DIR$/src/paramiko-master/sites/docs/api/kex_gss.rst" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Audit/src/paramiko-master/sites/docs/api/keys.rst" afterPath="$PROJECT_DIR$/src/paramiko-master/sites/docs/api/keys.rst" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Audit/src/paramiko-master/sites/docs/api/message.rst" afterPath="$PROJECT_DIR$/src/paramiko-master/sites/docs/api/message.rst" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Audit/src/paramiko-master/sites/docs/api/packet.rst" afterPath="$PROJECT_DIR$/src/paramiko-master/sites/docs/api/packet.rst" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Audit/src/paramiko-master/sites/docs/api/pipe.rst" afterPath="$PROJECT_DIR$/src/paramiko-master/sites/docs/api/pipe.rst" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Audit/src/paramiko-master/sites/docs/api/proxy.rst" afterPath="$PROJECT_DIR$/src/paramiko-master/sites/docs/api/proxy.rst" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Audit/src/paramiko-master/sites/docs/api/server.rst" afterPath="$PROJECT_DIR$/src/paramiko-master/sites/docs/api/server.rst" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Audit/src/paramiko-master/sites/docs/api/sftp.rst" afterPath="$PROJECT_DIR$/src/paramiko-master/sites/docs/api/sftp.rst" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Audit/src/paramiko-master/sites/docs/api/ssh_exception.rst" afterPath="$PROJECT_DIR$/src/paramiko-master/sites/docs/api/ssh_exception.rst" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Audit/src/paramiko-master/sites/docs/api/ssh_gss.rst" afterPath="$PROJECT_DIR$/src/paramiko-master/sites/docs/api/ssh_gss.rst" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Audit/src/paramiko-master/sites/docs/api/transport.rst" afterPath="$PROJECT_DIR$/src/paramiko-master/sites/docs/api/transport.rst" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Audit/src/paramiko-master/sites/docs/conf.py" afterPath="$PROJECT_DIR$/src/paramiko-master/sites/docs/conf.py" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Audit/src/paramiko-master/sites/docs/index.rst" afterPath="$PROJECT_DIR$/src/paramiko-master/sites/docs/index.rst" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Audit/src/paramiko-master/sites/shared_conf.py" afterPath="$PROJECT_DIR$/src/paramiko-master/sites/shared_conf.py" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Audit/src/paramiko-master/sites/www/_templates/rss.xml" afterPath="$PROJECT_DIR$/src/paramiko-master/sites/www/_templates/rss.xml" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Audit/src/paramiko-master/sites/www/changelog.rst" afterPath="$PROJECT_DIR$/src/paramiko-master/sites/www/changelog.rst" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Audit/src/paramiko-master/sites/www/conf.py" afterPath="$PROJECT_DIR$/src/paramiko-master/sites/www/conf.py" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Audit/src/paramiko-master/sites/www/contact.rst" afterPath="$PROJECT_DIR$/src/paramiko-master/sites/www/contact.rst" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Audit/src/paramiko-master/sites/www/contributing.rst" afterPath="$PROJECT_DIR$/src/paramiko-master/sites/www/contributing.rst" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Audit/src/paramiko-master/sites/www/faq.rst" afterPath="$PROJECT_DIR$/src/paramiko-master/sites/www/faq.rst" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Audit/src/paramiko-master/sites/www/index.rst" afterPath="$PROJECT_DIR$/src/paramiko-master/sites/www/index.rst" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Audit/src/paramiko-master/sites/www/installing-1.x.rst" afterPath="$PROJECT_DIR$/src/paramiko-master/sites/www/installing-1.x.rst" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Audit/src/paramiko-master/sites/www/installing.rst" afterPath="$PROJECT_DIR$/src/paramiko-master/sites/www/installing.rst" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Audit/src/paramiko-master/tasks.py" afterPath="$PROJECT_DIR$/src/paramiko-master/tasks.py" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Audit/src/paramiko-master/test.py" afterPath="$PROJECT_DIR$/src/paramiko-master/test.py" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Audit/src/paramiko-master/tests/__init__.py" afterPath="$PROJECT_DIR$/src/paramiko-master/tests/__init__.py" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Audit/src/paramiko-master/tests/cert_support/test_dss.key" afterPath="$PROJECT_DIR$/src/paramiko-master/tests/test_dss.key" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Audit/src/paramiko-master/tests/cert_support/test_dss.key-cert.pub" afterPath="$PROJECT_DIR$/src/paramiko-master/tests/cert_support/test_dss.key-cert.pub" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Audit/src/paramiko-master/tests/cert_support/test_ecdsa_256.key" afterPath="$PROJECT_DIR$/src/paramiko-master/tests/test_ecdsa_256.key" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Audit/src/paramiko-master/tests/cert_support/test_ecdsa_256.key-cert.pub" afterPath="$PROJECT_DIR$/src/paramiko-master/tests/cert_support/test_ecdsa_256.key-cert.pub" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Audit/src/paramiko-master/tests/cert_support/test_ed25519.key" afterPath="$PROJECT_DIR$/src/paramiko-master/tests/test_ed25519.key" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Audit/src/paramiko-master/tests/cert_support/test_ed25519.key-cert.pub" afterPath="$PROJECT_DIR$/src/paramiko-master/tests/cert_support/test_ed25519.key-cert.pub" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Audit/src/paramiko-master/tests/cert_support/test_rsa.key" afterPath="$PROJECT_DIR$/src/paramiko-master/tests/cert_support/test_rsa.key" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Audit/src/paramiko-master/tests/cert_support/test_rsa.key-cert.pub" afterPath="$PROJECT_DIR$/src/paramiko-master/tests/cert_support/test_rsa.key-cert.pub" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Audit/src/paramiko-master/tests/loop.py" afterPath="$PROJECT_DIR$/src/paramiko-master/tests/loop.py" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Audit/src/paramiko-master/tests/stub_sftp.py" afterPath="$PROJECT_DIR$/src/paramiko-master/tests/stub_sftp.py" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Audit/src/paramiko-master/tests/test_auth.py" afterPath="$PROJECT_DIR$/src/paramiko-master/tests/test_auth.py" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Audit/src/paramiko-master/tests/test_buffered_pipe.py" afterPath="$PROJECT_DIR$/src/paramiko-master/tests/test_buffered_pipe.py" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Audit/src/paramiko-master/tests/test_client.py" afterPath="$PROJECT_DIR$/src/paramiko-master/tests/test_client.py" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Audit/src/paramiko-master/tests/test_dss.key" afterPath="$PROJECT_DIR$/src/paramiko-master/tests/cert_support/test_dss.key" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Audit/src/paramiko-master/tests/test_dss_password.key" afterPath="$PROJECT_DIR$/src/paramiko-master/tests/test_dss_password.key" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Audit/src/paramiko-master/tests/test_ecdsa_256.key" afterPath="$PROJECT_DIR$/src/paramiko-master/tests/cert_support/test_ecdsa_256.key" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Audit/src/paramiko-master/tests/test_ecdsa_384.key" afterPath="$PROJECT_DIR$/src/paramiko-master/tests/test_ecdsa_384.key" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Audit/src/paramiko-master/tests/test_ecdsa_521.key" afterPath="$PROJECT_DIR$/src/paramiko-master/tests/test_ecdsa_521.key" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Audit/src/paramiko-master/tests/test_ecdsa_password_256.key" afterPath="$PROJECT_DIR$/src/paramiko-master/tests/test_ecdsa_password_256.key" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Audit/src/paramiko-master/tests/test_ecdsa_password_384.key" afterPath="$PROJECT_DIR$/src/paramiko-master/tests/test_ecdsa_password_384.key" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Audit/src/paramiko-master/tests/test_ecdsa_password_521.key" afterPath="$PROJECT_DIR$/src/paramiko-master/tests/test_ecdsa_password_521.key" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Audit/src/paramiko-master/tests/test_ed25519.key" afterPath="$PROJECT_DIR$/src/paramiko-master/tests/cert_support/test_ed25519.key" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Audit/src/paramiko-master/tests/test_ed25519_password.key" afterPath="$PROJECT_DIR$/src/paramiko-master/tests/test_ed25519_password.key" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Audit/src/paramiko-master/tests/test_file.py" afterPath="$PROJECT_DIR$/src/paramiko-master/tests/test_file.py" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Audit/src/paramiko-master/tests/test_gssapi.py" afterPath="$PROJECT_DIR$/src/paramiko-master/tests/test_gssapi.py" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Audit/src/paramiko-master/tests/test_hostkeys.py" afterPath="$PROJECT_DIR$/src/paramiko-master/tests/test_hostkeys.py" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Audit/src/paramiko-master/tests/test_kex.py" afterPath="$PROJECT_DIR$/src/paramiko-master/tests/test_kex.py" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Audit/src/paramiko-master/tests/test_kex_gss.py" afterPath="$PROJECT_DIR$/src/paramiko-master/tests/test_kex_gss.py" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Audit/src/paramiko-master/tests/test_message.py" afterPath="$PROJECT_DIR$/src/paramiko-master/tests/test_message.py" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Audit/src/paramiko-master/tests/test_packetizer.py" afterPath="$PROJECT_DIR$/src/paramiko-master/tests/test_packetizer.py" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Audit/src/paramiko-master/tests/test_pkey.py" afterPath="$PROJECT_DIR$/src/paramiko-master/tests/test_pkey.py" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Audit/src/paramiko-master/tests/test_rsa.key" afterPath="$PROJECT_DIR$/src/paramiko-master/demos/test_rsa.key" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Audit/src/paramiko-master/tests/test_rsa.key.pub" afterPath="$PROJECT_DIR$/src/paramiko-master/tests/test_rsa.key.pub" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Audit/src/paramiko-master/tests/test_rsa_password.key" afterPath="$PROJECT_DIR$/src/paramiko-master/tests/test_rsa_password.key" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Audit/src/paramiko-master/tests/test_sftp.py" afterPath="$PROJECT_DIR$/src/paramiko-master/tests/test_sftp.py" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Audit/src/paramiko-master/tests/test_sftp_big.py" afterPath="$PROJECT_DIR$/src/paramiko-master/tests/test_sftp_big.py" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Audit/src/paramiko-master/tests/test_ssh_exception.py" afterPath="$PROJECT_DIR$/src/paramiko-master/tests/test_ssh_exception.py" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Audit/src/paramiko-master/tests/test_ssh_gss.py" afterPath="$PROJECT_DIR$/src/paramiko-master/tests/test_ssh_gss.py" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Audit/src/paramiko-master/tests/test_transport.py" afterPath="$PROJECT_DIR$/src/paramiko-master/tests/test_transport.py" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Audit/src/paramiko-master/tests/test_util.py" afterPath="$PROJECT_DIR$/src/paramiko-master/tests/test_util.py" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Audit/src/paramiko-master/tests/util.py" afterPath="$PROJECT_DIR$/src/paramiko-master/tests/util.py" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -37,7 +850,7 @@
         </entry>
       </file>
       <file leaf-file-name="NEWS" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Audit/src/paramiko-master/NEWS">
+        <entry file="file://$PROJECT_DIR$/src/paramiko-master/NEWS">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="0">
               <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
@@ -47,7 +860,7 @@
         </entry>
       </file>
       <file leaf-file-name="demo.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Audit/src/paramiko-master/demos/demo.py">
+        <entry file="file://$PROJECT_DIR$/src/paramiko-master/demos/demo.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="-486">
               <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
@@ -105,8 +918,8 @@
       <file leaf-file-name="interactive.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Audit/backend/interactive.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="566">
-              <caret line="70" column="21" lean-forward="false" selection-start-line="70" selection-start-column="21" selection-end-line="70" selection-end-column="21" />
+            <state relative-caret-position="332">
+              <caret line="57" column="37" lean-forward="false" selection-start-line="57" selection-start-column="37" selection-end-line="57" selection-end-column="37" />
               <folding>
                 <element signature="e#817#830#0" expanded="true" />
               </folding>
@@ -119,16 +932,6 @@
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="574">
               <caret line="232" column="43" lean-forward="false" selection-start-line="232" selection-start-column="43" selection-end-line="232" selection-end-column="43" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="manage.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/manage.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="360">
-              <caret line="21" column="39" lean-forward="false" selection-start-line="21" selection-start-column="39" selection-end-line="21" selection-end-column="39" />
               <folding />
             </state>
           </provider>
@@ -221,17 +1024,6 @@
               <item name="PigeonEye" type="462c0819:PsiDirectoryNode" />
               <item name="Audit" type="462c0819:PsiDirectoryNode" />
             </path>
-            <path>
-              <item name="PigeonEye" type="b2602c69:ProjectViewProjectNode" />
-              <item name="PigeonEye" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="PigeonEye" type="b2602c69:ProjectViewProjectNode" />
-              <item name="PigeonEye" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="openssh-7.6p1" type="462c0819:PsiDirectoryNode" />
-            </path>
           </expand>
           <select />
         </subPane>
@@ -244,6 +1036,9 @@
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
   </component>
   <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src" />
+    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/Audit/backend" />
       <recent name="$PROJECT_DIR$/Audit/src" />
@@ -369,8 +1164,9 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="94" y="307" width="1377" height="912" extended-state="6" />
+    <editor active="true" />
     <layout>
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.22981818" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.22981818" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4968789" sideWeight="0.50545454" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -402,16 +1198,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/audit_shell.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="11" column="15" lean-forward="false" selection-start-line="11" selection-start-column="15" selection-end-line="11" selection-end-column="15" />
-          <folding>
-            <element signature="e#1#11#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Audit/admin.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="144">
@@ -691,7 +1477,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Audit/src/paramiko-master/NEWS">
+    <entry file="file://$PROJECT_DIR$/src/paramiko-master/NEWS">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
@@ -699,7 +1485,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Audit/src/paramiko-master/demos/demo.py">
+    <entry file="file://$PROJECT_DIR$/src/paramiko-master/demos/demo.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-486">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
@@ -771,10 +1557,18 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/__init__.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/Audit/backend/interactive.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="566">
-          <caret line="70" column="21" lean-forward="false" selection-start-line="70" selection-start-column="21" selection-end-line="70" selection-end-column="21" />
+        <state relative-caret-position="332">
+          <caret line="57" column="37" lean-forward="false" selection-start-line="57" selection-start-column="37" selection-end-line="57" selection-end-column="37" />
           <folding>
             <element signature="e#817#830#0" expanded="true" />
           </folding>
