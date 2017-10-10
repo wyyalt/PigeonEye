@@ -1,0 +1,112 @@
+{% extends 'index.html' %}
+
+{% block content-container %}
+<!--Page Title-->
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<div id="page-title">
+    <h1 class="page-header text-overflow">Expanded Navigation</h1>
+
+    <!--Searchbox-->
+    <div class="searchbox">
+        <div class="input-group custom-search-form">
+            <input type="text" class="form-control" placeholder="Search..">
+            <span class="input-group-btn">
+                <button class="text-muted" type="button"><i class="fa fa-search"></i></button>
+            </span>
+        </div>
+    </div>
+</div>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<!--End page title-->
+
+
+<!--Breadcrumb-->
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<ol class="breadcrumb">
+    <li><a href="#">Home</a></li>
+    <li><a href="#">Library</a></li>
+    <li class="active">主机列表</li>
+</ol>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<!--End breadcrumb-->
+
+
+<!--Page content-->
+<!--===================================================-->
+<div id="page-content">
+    <div class="panel" style="float: left;width: 30%;">
+        <div class="panel-heading">
+            <h3 class="panel-title">主机组</h3>
+        </div>
+        <div class="panel-body">
+            <!--List Group with Badges-->
+            <!--===================================================-->
+            <ul class="list-group">
+                {% for group in request.user.account.host_groups.all %}
+                    {% if group.id == 1 %}
+                        <li class="list-group-item active" onclick="get_hosts({{ group.id }},this)"><span style="color: green" class="badge badge-primary">{{ group.host_user_binds.count }}</span>{{ group.name }}</li>
+                    {% else %}
+                        <li class="list-group-item" onclick="get_hosts({{ group.id }},this)"><span class="badge badge-primary">{{ group.host_user_binds.count }}</span>{{ group.name }}</li>
+                    {% endif %}
+                {% endfor %}
+                <li class="list-group-item" onclick="get_hosts(-1,this)"><span class="badge badge-primary">{{ request.user.account.host_user_binds.count }}</span>未分组</li>
+            </ul>
+            <!--===================================================-->
+        </div>
+    </div>
+    <div class="panel"  style="float: right;width:69%;">
+        <div class="panel-heading" >
+            <h3 class="panel-title">主机列表</h3>
+        </div>
+        <div class="panel-body">
+            <table class="table table-bordered table-hover">
+                <thead>
+                    <tr>
+                        <td>ID</td>
+                        <td>HOSTNAME</td>
+                        <td>PORT</td>
+                        <td>IDC</td>
+                        <td>IPADDR</td>
+                        <td>USER</td>
+                        <td>OPTIPON</td>
+                    </tr>
+                </thead>
+                <tbody id="hostlist">
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+<!--===================================================-->
+<!--End page content-->
+
+
+{% endblock %}
+{% block content_js %}
+<script>
+
+    function get_hosts(gid,self) {
+        $("#hostlist").empty();
+        $.get("/api{{ request.path }}",{"gid":gid},function (data) {
+
+            hosts = JSON.parse(data);
+
+            $.each(hosts,function (index,host) {
+                var $tr = ("<tr><td>"+host.id+"</td>" +
+                    "<td>"+host.host__hostname+"</td>" +
+                    "<td>"+host.host__port+"</td>" +
+                    "<td>"+host.host__idc__name+"</td>" +
+                    "<td>"+host.host__ip_addr+"</td>" +
+                    "<td>"+host.host_user__username+"</td><td><a href='#'>LOGIN</a></td></tr>");
+                $("#hostlist").append($tr)
+            })
+
+        });
+        $(self).addClass("active").siblings().removeClass('active');
+        $(self).children("span").css({"color":'green'}).parent().siblings().children("span").css({"color":'white'})
+        }
+    get_hosts(1)
+</script>
+{% endblock %}
+
+
