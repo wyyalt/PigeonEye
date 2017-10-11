@@ -76,8 +76,6 @@ def ssh_session(host_user_bind,user_obj):
     username = host_user_bind.host_user.username
     password = host_user_bind.host_user.password
 
-    print(hostname,port,username,password)
-
     # now connect
     try:
         sock = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
@@ -94,27 +92,27 @@ def ssh_session(host_user_bind,user_obj):
         except paramiko.SSHException:
             print('*** SSH negotiation failed.')
             sys.exit(1)
-
-        try:
-            keys = paramiko.util.load_host_keys(os.path.expanduser('~/.ssh/known_hosts'))
-        except IOError:
-            try:
-                keys = paramiko.util.load_host_keys(os.path.expanduser('~/ssh/known_hosts'))
-            except IOError:
-                print('*** Unable to open host keys file')
-                keys = {}
-
-        # check server's host key -- this is important.
-        key = t.get_remote_server_key()
-        if hostname not in keys:
-            print('*** WARNING: Unknown host key!')
-        elif key.get_name() not in keys[hostname]:
-            print('*** WARNING: Unknown host key!')
-        elif keys[hostname][key.get_name()] != key:
-            print('*** WARNING: Host key has changed!!!')
-            sys.exit(1)
-        else:
-            print('*** Host key OK.')
+    #
+    #     try:
+    #         keys = paramiko.util.load_host_keys(os.path.expanduser('~/.ssh/known_hosts'))
+    #     except IOError:
+    #         try:
+    #             keys = paramiko.util.load_host_keys(os.path.expanduser('~/ssh/known_hosts'))
+    #         except IOError:
+    #             print('*** Unable to open host keys file')
+    #             keys = {}
+    #
+    #     # check server's host key -- this is important.
+    #     key = t.get_remote_server_key()
+    #     if hostname not in keys:
+    #         print('*** WARNING: Unknown host key!')
+    #     elif key.get_name() not in keys[hostname]:
+    #         print('*** WARNING: Unknown host key!')
+    #     elif keys[hostname][key.get_name()] != key:
+    #         print('*** WARNING: Host key has changed!!!')
+    #         sys.exit(1)
+    #     else:
+    #         print('*** Host key OK.')
 
 
         if not t.is_authenticated():

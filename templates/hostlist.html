@@ -5,7 +5,7 @@
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <div id="page-title">
     <h1 class="page-header text-overflow">Expanded Navigation</h1>
-
+    {% csrf_token %}
     <!--Searchbox-->
     <div class="searchbox">
         <div class="input-group custom-search-form">
@@ -69,6 +69,7 @@
                         <td>IPADDR</td>
                         <td>USER</td>
                         <td>OPTIPON</td>
+                        <td>TOKEN</td>
                     </tr>
                 </thead>
                 <tbody id="hostlist">
@@ -97,7 +98,9 @@
                     "<td>"+host.host__port+"</td>" +
                     "<td>"+host.host__idc__name+"</td>" +
                     "<td>"+host.host__ip_addr+"</td>" +
-                    "<td>"+host.host_user__username+"</td><td><a href='#'>LOGIN</a></td></tr>");
+                    "<td>"+host.host_user__username+"</td>" +
+                    "<td><a onclick='get_token("+host.id+",this)' href='#'>Token | Login</a></td>" +
+                    "<td></td></tr>");
                 $("#hostlist").append($tr)
             })
 
@@ -105,6 +108,14 @@
         $(self).addClass("active").siblings().removeClass('active');
         $(self).children("span").css({"color":'green'}).parent().siblings().children("span").css({"color":'white'})
         }
+
+    function get_token(hub_id,self) {
+        $.post('{% url 'token' %}',{'hub_id':hub_id,'csrfmiddlewaretoken':'{{ csrf_token }}'},function(data){
+            data = JSON.parse(data);
+            $(self).parent().next().html(data.token)
+        });
+
+    }
     get_hosts(1)
 </script>
 {% endblock %}

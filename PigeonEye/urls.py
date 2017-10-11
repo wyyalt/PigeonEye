@@ -20,7 +20,9 @@ urlpatterns = [
     url(r'^admin/', admin.site.urls),
     url(r'^$', views.index),
     url(r'^hostlist.html$', views.host_list,name='hostlist'),
+    url(r'^multicmd.html$', views.multi_cmd,name='multicmd'),
     url(r'^login.html$', views.user_login,name='login'),
+    url(r'^token.html$', views.token,name='token'),
     url(r'^logout.html$', views.user_logout,name='logout'),
     url(r'^api/hostlist.html$', views.get_hosts),
 ]

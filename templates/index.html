@@ -395,9 +395,9 @@
 										</a>
 
 										<!--Submenu-->
-										<ul class="collapse in">
-											<li><a href="#">批量命令</a></li>
-											<li class="active-link"><a href="#">文件分发</a></li>
+										<ul class="collapse">
+											<li><a href="{% url 'multicmd' %}">批量命令</a></li>
+											<li><a href="#">文件分发</a></li>
 										</ul>
 									</li>
 
@@ -629,7 +629,10 @@
 <script>
     $(document).ready(function () {
         $("#mainnav-menu a[href='{{ request.path }}']").parent().addClass('active-link');
-    })
+        $("#mainnav-menu a[href='{{ request.path }}']").parent().parent().addClass('in');
+    });
+
+
 </script>
 {% endblock %}
 

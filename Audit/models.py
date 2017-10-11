@@ -61,6 +61,23 @@ class HostUserBind(models.Model):
     def __str__(self):
         return "%s-%s"%(self.host,self.host_user)
 
+class Token(models.Model):
+    """
+    存储登录token
+    """
+    host_user_bind = models.ForeignKey("HostUserBind")
+    token = models.CharField(max_length=128,unique=True)
+    account = models.ForeignKey("Account")
+    timeout = models.IntegerField(default=300)
+    token_date = models.DateTimeField(auto_now_add=True)
+
+    class Meta:
+        unique_together = ('host_user_bind','token')
+
+    def __str__(self):
+        return "%s-%s"%(self.host_user_bind,self.token)
+
+
 class SessionLog(models.Model):
     account = models.ForeignKey("Account")
     host_user_bind = models.ForeignKey("HostUserBind")

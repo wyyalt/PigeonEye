@@ -30,12 +30,43 @@ class UserShell(object):
         else:
             print("Too many attempts!")
 
+    def token_auth(self):
+
+        count = 0
+        while count < 3:
+            token = input("Input your token, and if not ,press Enter>>:").strip()
+            if len(token) == 0:
+                return
+
+            if len(token) != 8:
+                print("Token length must be 8...")
+            else:
+                import datetime
+                exist_timeout = datetime.datetime.now() - datetime.timedelta(seconds=300)
+                token_obj = models.Token.objects.filter(token=token,token_date__gt=exist_timeout).first()
+                if token_obj:
+                    self.user = token_obj.account.user
+                    return token_obj
+                else:
+                    print("Error input!")
+            count += 1
+
+        exit("Error more than 3 times!")
+
+
 
     def start(self):
         """
         启动交互程序
         :return:
         """
+
+        token = self.token_auth()
+        if token:
+            # ssh_interactive.ssh_session(selected_host, self.user)
+            ssh_interactive.ssh_session(token.host_user_bind, self.user)
+            return
+
         if self.auth():
             # print(self.user.account.host_user_binds.all())
             while True:
