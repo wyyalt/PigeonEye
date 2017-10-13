@@ -76,15 +76,22 @@ from Audit.backend import task_handler
 @login_required
 def multi_task(request):
 
-    task_info = json.loads(request.POST.get('task_info'))
-    print(task_info)
-
     task_obj = task_handler.Task(request)
 
     if task_obj.is_valid():
         result = task_obj.run()
-        print(result)
+        return HttpResponse(result)
 
-
-
-    return HttpResponse("...")
+@login_required
+def task_result(request):
+    task_id = request.GET.get('task_id')
+    result_list = list(models.TaskLog.objects.filter(task__id=task_id).values(
+        'task__id',
+        'host_user_bind__host__ip_addr',
+        'host_user_bind__host_user__username',
+        'result',
+        'status'
+        )
+    )
+    print(result_list)
+    return HttpResponse(json.dumps(result_list))

@@ -44,16 +44,16 @@
             <ul class="list-group">
                 {% for group in request.user.account.host_groups.all %}
                     <li class="list-group-item"><input onclick="checkall(this)" type="checkbox"><span style="cursor:pointer;" class="badge badge-primary" onclick="show_host_list(this)">{{ group.host_user_binds.count }}</span>{{ group.name }}</li>
-                    <div style="margin-bottom: 10px;" class="hosts hide">
+                    <div style="margin-bottom: 10px;" class="host_bind hide">
                         {% for host_bind in group.host_user_binds.all %}
-                            <div class="list-group-item" ><input  onclick="get_hosts()"  type="checkbox" value="{{ host_bind.host.id }}">{{ host_bind.host.ip_addr }}</div>
+                            <div class="list-group-item" ><input  onclick="get_hosts()"  type="checkbox" value="{{ host_bind.id }}">{{ host_bind.host.ip_addr }}</div>
                         {% endfor %}
                     </div>
                 {% endfor %}
                 <li class="list-group-item" onclick="show_host_list(this)"><input onclick="checkall(this)" type="checkbox"> <span style="cursor:pointer;" class="badge badge-primary" onclick="show_host_list(this)">{{ request.user.account.host_user_binds.count }}</span>未分组</li>
-                <div style="margin-bottom: 10px;" class="hosts hide">
+                <div style="margin-bottom: 10px;" class="host_bind hide">
                     {% for host_bind in request.user.account.host_user_binds.all %}
-                        <div class="list-group-item"><input onclick="get_hosts()" type="checkbox" value="{{ host_bind.host.id }}">{{ host_bind.host.ip_addr }}</div>
+                        <div class="list-group-item"><input onclick="get_hosts()" type="checkbox" value="{{ host_bind.id }}">{{ host_bind.host.ip_addr }}</div>
                     {% endfor %}
                 </div>
             </ul>
@@ -74,8 +74,8 @@
         <div class="panel-heading" >
             <h3 class="panel-title">执行结果</h3>
         </div>
-        <div class="panel-body">
-            cmd
+        <div id="cmd_result" class="panel-body">
+
         </div>
     </div>
 
@@ -89,8 +89,8 @@
 <script>
 
     function exec_cmd(cmd_type,self) {
-        var $hosts = get_hosts();
-        if ($hosts.length === 0){
+        var $host_binds = get_hosts();
+        if ($host_binds.length === 0){
             alert("请选择主机！");
             return false
         }
@@ -104,7 +104,7 @@
 
         task_info = {
             'task_type':cmd_type,
-            'hosts':JSON.stringify($hosts),
+            'host_binds':JSON.stringify($host_binds),
             'task_body':$task_boby
         };
 
@@ -113,8 +113,42 @@
             'task_info':JSON.stringify(task_info)
 
         },function (data) {
-            console.log(data)
+            console.log(data);
+            //获取任务执行结果
+            var task_id = data;
+            task_result(data);
+            ret = setInterval(function () {
+                    status = task_result(data);
+                    if (status === 5){
+                        clearInterval(ret)
+                    }
+
+                },2000)
         });
+
+    }
+
+    function task_result(task_id){
+        var $result = 0;
+
+        $.getJSON("{% url 'taskresult' %}",{'task_id':task_id},function(data){
+            console.log(data);
+            //将结果显示在前台
+            $("#cmd_result").empty();
+            $.each(data,function (index,result) {
+                var $pre = $("<pre></pre>");
+                $pre.text(result.result);
+                $("#cmd_result").append($pre);
+                if (Number(result.status) !== 0){
+                    $result = Number(result.status) + Number($result);
+                    console.log($result)
+                }else{
+                    $result = 0
+                }
+            })
+
+        });
+        return $result
 
     }
 
@@ -129,13 +163,13 @@
     }
 
     function get_hosts() {
-        $host_id_list = [];
-        $hosts = $(".hosts").find(":checked");
-        $.each($hosts,function (index,i) {
-            $host_id_list.push($(i).val())
+        $host_bind_list = [];
+        $host_binds = $(".host_bind").find(":checked");
+        $.each($host_binds,function (index,i) {
+            $host_bind_list.push($(i).val())
         });
 
-        return $host_id_list
+        return $host_bind_list
     }
 
 </script>

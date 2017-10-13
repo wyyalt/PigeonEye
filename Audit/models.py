@@ -134,7 +134,7 @@ class TaskLog(models.Model):
     任务结果
     """
     task = models.ForeignKey("Task")
-    host = models.ForeignKey("Host")
+    host_user_bind = models.ForeignKey("HostUserBind")
     status_choice = (
         (0,'init'),
         (1,'success'),
@@ -145,11 +145,11 @@ class TaskLog(models.Model):
     result = models.TextField(blank=True,default="Waiting...")
 
     class Meta:
-        unique_together = ('task','host')
+        unique_together = ('task','host_user_bind')
 
 
     def __str__(self):
-        return "%s-%s-%s-%s-%s"%(self.task_id,self.task,self.host,self.status,self.result)
+        return "%s-%s-%s-%s-%s"%(self.task_id,self.task,self.host_user_bind,self.status,self.result)
 
 
 

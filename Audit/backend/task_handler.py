@@ -21,7 +21,7 @@ class Task(object):
         """
         if self.task_info:
             if self.task_info.get('task_type') == "cmd":
-                if self.task_info.get('hosts') and self.task_info.get('task_body'):
+                if self.task_info.get('host_binds') and self.task_info.get('task_body'):
                     return True
                 self.err_msg['err_info'] = "Hosts is empty or task_body is none!"
             if self.task_info.get('task_type') == "file":
@@ -37,7 +37,8 @@ class Task(object):
         :return:
         """
         task_func = getattr(self,self.task_info['task_type'])
-        return task_func()
+        task_id = task_func()
+        return task_id
 
     @atomic
     def cmd(self):
@@ -52,30 +53,22 @@ class Task(object):
             account = self.request.user.account
         )
 
-        hosts = set(json.loads(self.task_info['hosts']))
+        host_bind_list = set(json.loads(self.task_info['host_binds']))
         task_log_objs = []
-        for host in hosts:
+        for host in host_bind_list:
             task_log_objs.append(models.TaskLog(
                 task_id = task_obj.id,
-                host_id = int(host),
+                host_user_bind_id = host,
                 status = 0,
             ))
 
         models.TaskLog.objects.bulk_create(task_log_objs,100)
 
-        print(task_obj.id)
-        # taskobj = models.Task.objects.filter(id=task_obj.id).first()
-        # print(taskobj)
 
 
         import subprocess
         cmd_str = "python3 %s %s %s"%(settings.MULTI_CMD_SCRIPT,self.task_info['task_type'],task_obj.id)
-        print(cmd_str)
-        result = subprocess.Popen(cmd_str,shell=True,stdout=subprocess.PIPE,stderr=subprocess.PIPE)
-        result_data = result.stdout.read() + result.stderr.read()
-        print(result_data.decode("utf8"))
-
-
+        subprocess.Popen(cmd_str,shell=True,stdout=subprocess.PIPE,stderr=subprocess.PIPE)
         return task_obj.id
 
     def file_handler(self):
