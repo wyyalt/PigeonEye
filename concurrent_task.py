@@ -1,10 +1,11 @@
-import sys,os
+import sys, os
 import paramiko
+
+
 def cmd(task_log_obj):
     try:
         ssh = paramiko.SSHClient()
         ssh.set_missing_host_key_policy(paramiko.AutoAddPolicy())
-
 
         ssh.connect(
             hostname=task_log_obj.host_user_bind.host.ip_addr,
@@ -13,9 +14,8 @@ def cmd(task_log_obj):
             password=task_log_obj.host_user_bind.host_user.password
         )
 
-
-        stdin,stdout,stderr = ssh.exec_command(task_log_obj.task.body)
-        result = stdout.read()+stderr.read()
+        stdin, stdout, stderr = ssh.exec_command(task_log_obj.task.body)
+        result = stdout.read() + stderr.read()
         ssh.close()
 
         task_log_obj.result = result
@@ -30,12 +30,15 @@ def cmd(task_log_obj):
 def file():
     pass
 
+
 def callback(arg):
     print(arg)
+
 
 if __name__ == "__main__":
     os.environ.setdefault("DJANGO_SETTINGS_MODULE", "PigeonEye.settings")
     import django
+
     django.setup()
 
     task_type = sys.argv[1]
@@ -44,7 +47,7 @@ if __name__ == "__main__":
     from Audit import models
 
     task_obj = models.Task.objects.filter(id=task_id).first()
-    func = getattr(sys.modules[__name__],task_type)
+    func = getattr(sys.modules[__name__], task_type)
 
     import multiprocessing
 
@@ -55,12 +58,3 @@ if __name__ == "__main__":
 
     pool.close()
     pool.join()
-
-
-
-
-
-
-
-
-

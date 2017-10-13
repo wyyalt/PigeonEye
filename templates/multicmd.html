@@ -72,10 +72,20 @@
     </div>
     <div class="panel"  style="float: right;width:69%;">
         <div class="panel-heading" >
-            <h3 class="panel-title">执行结果</h3>
-        </div>
-        <div id="cmd_result" class="panel-body">
 
+            <div class="panel-title">
+                <span class="col-lg-1 pull-left">执行结果</span>
+                <div class="hide col-lg-11 pull-right ">
+                    <div style="margin-bottom: 0;margin-top: 10px;" class="progress progress-xl">
+                        <div id="percent" style="width: 0" class="progress-bar progress-bar-info"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="panel-body">
+            <div id="cmd_result">
+            </div>
         </div>
     </div>
 
@@ -113,42 +123,61 @@
             'task_info':JSON.stringify(task_info)
 
         },function (data) {
-            console.log(data);
+            //显示进度条
+            $("#percent").parent().parent().removeClass('hide');
             //获取任务执行结果
             var task_id = data;
-            task_result(data);
+            task_result(task_id);
             ret = setInterval(function () {
-                    status = task_result(data);
-                    if (status === 5){
-                        clearInterval(ret)
-                    }
-
-                },2000)
+                task_result(task_id);
+            },2000)
         });
 
     }
 
     function task_result(task_id){
-        var $result = 0;
 
         $.getJSON("{% url 'taskresult' %}",{'task_id':task_id},function(data){
-            console.log(data);
             //将结果显示在前台
             $("#cmd_result").empty();
+            var all_task_finished = true;
+            var finished_count = 0;
             $.each(data,function (index,result) {
+                var $host_info = $("<p class='form-control'>" +
+                    "任务ID：<span>"+result.task__id+"</span>&nbsp;&nbsp;" +
+                    "IP： <span>"+result.host_user_bind__host__ip_addr+"</span>&nbsp;&nbsp;" +
+                    "执行账户：<span>"+result.host_user_bind__host_user__username+"</span>" +
+                    "</p>");
                 var $pre = $("<pre></pre>");
                 $pre.text(result.result);
-                $("#cmd_result").append($pre);
-                if (Number(result.status) !== 0){
-                    $result = Number(result.status) + Number($result);
-                    console.log($result)
-                }else{
-                    $result = 0
-                }
-            })
+                $("#cmd_result").append($host_info).append($pre);
 
-        });
-        return $result
+                //主任务状态标记
+                if(all_task_finished && Number(result.status) !== 0){
+                    all_task_finished = true;
+                }else{
+                    all_task_finished = false
+                }
+
+                //成功主机计数
+                if (Number(result.status) !==0){
+                    finished_count = finished_count + 1;
+                }
+
+            });//end each
+
+            //进度计算
+            var task_percent = parseInt(finished_count / data.length * 100);
+            $("#percent").text("任务进度"+task_percent+'%').css('width',task_percent+"%");
+
+            //验证所有任务是否执行完成
+            if(all_task_finished){
+                clearInterval(ret)
+            }
+
+
+        });//end getJSON
+
 
     }
 
