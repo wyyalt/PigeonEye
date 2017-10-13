@@ -65,12 +65,14 @@
             <h3 class="panel-title">命令</h3>
         </div>
         <div class="panel-body">
-            cmd
+            <textarea id="task_body" class="form-control"></textarea>
+            <a onclick="exec_cmd('cmd',this)" class="btn btn-info pull-right">执行</a>
+            <a class="btn btn-danger pull-right">终止</a>
         </div>
     </div>
     <div class="panel"  style="float: right;width:69%;">
         <div class="panel-heading" >
-            <h3 class="panel-title">命令</h3>
+            <h3 class="panel-title">执行结果</h3>
         </div>
         <div class="panel-body">
             cmd
@@ -86,17 +88,54 @@
 {% block content_js %}
 <script>
 
+    function exec_cmd(cmd_type,self) {
+        var $hosts = get_hosts();
+        if ($hosts.length === 0){
+            alert("请选择主机！");
+            return false
+        }
+
+        var $task_boby = $("#task_body").val().trim();
+        if ($task_boby.length === 0){
+            //可优化
+            alert("请输入命令！");
+            return false
+        }
+
+        task_info = {
+            'task_type':cmd_type,
+            'hosts':JSON.stringify($hosts),
+            'task_body':$task_boby
+        };
+
+        $.post("{% url 'multitask' %}",{
+            'csrfmiddlewaretoken':'{{ csrf_token }}',
+            'task_info':JSON.stringify(task_info)
+
+        },function (data) {
+            console.log(data)
+        });
+
+    }
+
+
     function show_host_list(self) {
         $(self).parent().next().toggleClass('hide')
     }
 
     function checkall(self) {
-        $(self).parent().next().find(":checkbox").prop('checked',$(self).prop('checked'))
+        $(self).parent().next().find(":checkbox").prop('checked',$(self).prop('checked'));
         get_hosts()
     }
 
     function get_hosts() {
-        console.log($(".hosts").find(":checked"))
+        $host_id_list = [];
+        $hosts = $(".hosts").find(":checked");
+        $.each($hosts,function (index,i) {
+            $host_id_list.push($(i).val())
+        });
+
+        return $host_id_list
     }
 
 </script>

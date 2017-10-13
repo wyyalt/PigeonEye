@@ -115,7 +115,6 @@ USE_L10N = True
 
 USE_TZ = True
 
-
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/1.11/howto/static-files/
 
@@ -126,3 +125,6 @@ STATICFILES_DIRS = (
 
 LOGIN_URL='/login.html'
 SESSION_TRACKER_SCRIPT = os.path.join(BASE_DIR,'Audit/backend/session_tracker.sh')
+
+
+MULTI_CMD_SCRIPT = os.path.join(BASE_DIR, 'concurrent_task.py')

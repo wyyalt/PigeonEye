@@ -69,5 +69,22 @@ def token(request):
 
 @login_required
 def multi_cmd(request):
-
     return render(request,'multicmd.html')
+
+from Audit.backend import task_handler
+
+@login_required
+def multi_task(request):
+
+    task_info = json.loads(request.POST.get('task_info'))
+    print(task_info)
+
+    task_obj = task_handler.Task(request)
+
+    if task_obj.is_valid():
+        result = task_obj.run()
+        print(result)
+
+
+
+    return HttpResponse("...")

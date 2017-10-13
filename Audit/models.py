@@ -113,3 +113,46 @@ class Account(models.Model):
     def __str__(self):
         return "%s-%s"%(self.user,self.name)
 
+
+class Task(models.Model):
+    """
+    任务信息
+    """
+    type_choice = ((0,'cmd'),(1,'file'))
+    type = models.SmallIntegerField(choices=type_choice)
+    body = models.TextField(max_length=1024)
+    account = models.ForeignKey("Account")
+    timeout = models.IntegerField(default=300)
+    date = models.DateTimeField(auto_now_add=True)
+
+    def __str__(self):
+        return "%s-%s-%s-%s-%s"%(self.id,self.account,self.type,self.body,self.date)
+
+
+class TaskLog(models.Model):
+    """
+    任务结果
+    """
+    task = models.ForeignKey("Task")
+    host = models.ForeignKey("Host")
+    status_choice = (
+        (0,'init'),
+        (1,'success'),
+        (2,'failed'),
+        (3,'timeout'),
+    )
+    status = models.SmallIntegerField(choices=status_choice)
+    result = models.TextField(blank=True,default="Waiting...")
+
+    class Meta:
+        unique_together = ('task','host')
+
+
+    def __str__(self):
+        return "%s-%s-%s-%s-%s"%(self.task_id,self.task,self.host,self.status,self.result)
+
+
+
+
+
+
