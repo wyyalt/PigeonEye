@@ -1,0 +1,151 @@
+<script>
+
+    function exec_task(cmd_type,self) {
+        var $host_binds = get_hosts();
+
+        if ($host_binds.length === 0){
+            alert("请选择主机！");
+            return false
+        }
+
+        if (cmd_type === "cmd"){
+            var $task_boby = $("#task_body").val().trim();
+            if ($task_boby.length === 0){
+                //可优化
+                alert("请输入命令！");
+                return false
+            }
+        }
+
+        if (cmd_type === "file_handler"){
+{#            var $task_boby = $("#task_body").val().trim();#}
+            var $remote_path = $("#remote_path").val().trim();
+
+            if($remote_path.length === 0){
+                alert("远程路径为空！");
+                return false
+            }
+
+            option_type = $("#option_type").val();
+            if(option_type === "put"){
+                var $file_eles = $(".dz-success").find('.dz-filename');
+                var file_list = [];
+                $.each($file_eles,function () {
+                    file_list.push($(this).text())
+                });
+
+                if (file_list.length === 0){
+                    //可优化
+                    alert("请先上传文件！");
+                    return false
+                }
+
+
+                var $task_boby = {
+                    'option_type':option_type,
+                    'file_list':file_list,
+                    'remote_path':$remote_path
+                }
+            }else{
+                var $task_boby = {
+                    'option_type':option_type,
+                    'remote_path':$remote_path
+                }
+            }
+        }
+
+
+        task_info = {
+            'task_type':cmd_type,
+            'host_binds':$host_binds,
+            'task_body':$task_boby
+        };
+
+        $.post("{% url 'multitask' %}",{
+            'csrfmiddlewaretoken':'{{ csrf_token }}',
+            'task_info':JSON.stringify(task_info)
+
+        },function (data) {
+            //显示进度条
+            $("#percent").parent().parent().removeClass('hide');
+            //获取任务执行结果
+            var task_id = data;
+            task_result(task_id);
+            ret = setInterval(function () {
+                task_result(task_id);
+            },2000)
+        });
+
+    }
+
+    function task_result(task_id){
+
+        $.getJSON("{% url 'taskresult' %}",{'task_id':task_id},function(data){
+            //将结果显示在前台
+            $("#cmd_result").empty();
+            var all_task_finished = true;
+            var finished_count = 0;
+            $.each(data,function (index,result) {
+                var $host_info = $("<p class='form-control'>" +
+                    "任务ID：<span>"+result.task__id+"</span>&nbsp;&nbsp;" +
+                    "IP： <span>"+result.host_user_bind__host__ip_addr+"</span>&nbsp;&nbsp;" +
+                    "执行账户：<span>"+result.host_user_bind__host_user__username+"</span>" +
+                    "</p>");
+                var $pre = $("<pre></pre>");
+                $pre.text(result.result);
+                $("#cmd_result").append($host_info).append($pre);
+
+                //主任务状态标记
+                if(all_task_finished && Number(result.status) !== 0){
+                    all_task_finished = true;
+                }else{
+                    all_task_finished = false
+                }
+
+                //成功主机计数
+                if (Number(result.status) !==0){
+                    finished_count = finished_count + 1;
+                }
+
+            });//end each
+
+            //进度计算
+            var task_percent = parseInt(finished_count / data.length * 100);
+            $("#percent").text("任务进度"+task_percent+'%').css('width',task_percent+"%");
+
+            //验证所有任务是否执行完成
+            if(all_task_finished){
+                clearInterval(ret);
+                if(option_type==="get"){
+                    location.href="{% url 'download' %}?task_id="+task_id;
+                }
+
+            }
+
+
+        });//end getJSON
+
+
+    }
+
+
+    function show_host_list(self) {
+        $(self).parent().next().toggleClass('hide')
+    }
+
+    function checkall(self) {
+        $(self).parent().next().find(":checkbox").prop('checked',$(self).prop('checked'));
+        get_hosts()
+    }
+
+    function get_hosts() {
+        $host_bind_list = [];
+        $host_binds = $(".host_bind").find(":checked");
+        $.each($host_binds,function (index,i) {
+            $host_bind_list.push($(i).val())
+        });
+
+        return $host_bind_list
+    }
+
+</script>

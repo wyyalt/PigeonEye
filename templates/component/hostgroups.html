@@ -1,0 +1,26 @@
+<div class="panel" style="float: left;width: 30%;">
+        <div class="panel-heading">
+            <h3 class="panel-title">主机组</h3>
+        </div>
+        <div class="panel-body">
+            <!--List Group with Badges-->
+            <!--===================================================-->
+            <ul class="list-group">
+                {% for group in request.user.account.host_groups.all %}
+                    <li class="list-group-item"><input onclick="checkall(this)" type="checkbox"><span style="cursor:pointer;" class="badge badge-primary" onclick="show_host_list(this)">{{ group.host_user_binds.count }}</span>{{ group.name }}</li>
+                    <div style="margin-bottom: 10px;" class="host_bind hide">
+                        {% for host_bind in group.host_user_binds.all %}
+                            <div class="list-group-item" ><input  onclick="get_hosts()"  type="checkbox" value="{{ host_bind.id }}">{{ host_bind.host.ip_addr }}</div>
+                        {% endfor %}
+                    </div>
+                {% endfor %}
+                <li class="list-group-item" onclick="show_host_list(this)"><input onclick="checkall(this)" type="checkbox"> <span style="cursor:pointer;" class="badge badge-primary" onclick="show_host_list(this)">{{ request.user.account.host_user_binds.count }}</span>未分组</li>
+                <div style="margin-bottom: 10px;" class="host_bind hide">
+                    {% for host_bind in request.user.account.host_user_binds.all %}
+                        <div class="list-group-item"><input onclick="get_hosts()" type="checkbox" value="{{ host_bind.id }}">{{ host_bind.host.ip_addr }}</div>
+                    {% endfor %}
+                </div>
+            </ul>
+            <!--===================================================-->
+        </div>
+    </div>

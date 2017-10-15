@@ -1,0 +1,128 @@
+{% extends 'index.html' %}
+{% block css %}
+    <link href="/static/plugins/dist/dropzone.css" rel="stylesheet">
+
+{% endblock %}
+
+{% block content-container %}
+<!--Page Title-->
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<div id="page-title">
+    <h1 class="page-header text-overflow">多任务</h1>
+    {% csrf_token %}
+    <!--Searchbox-->
+    <div class="searchbox">
+        <div class="input-group custom-search-form">
+            <input type="text" class="form-control" placeholder="Search..">
+            <span class="input-group-btn">
+                <button class="text-muted" type="button"><i class="fa fa-search"></i></button>
+            </span>
+        </div>
+    </div>
+</div>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<!--End page title-->
+
+
+<!--Breadcrumb-->
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<ol class="breadcrumb">
+    <li><a href="#">Home</a></li>
+    <li><a href="#">Library</a></li>
+    <li class="active">文件上传</li>
+</ol>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<!--End breadcrumb-->
+
+
+<!--Page content-->
+<!--===================================================-->
+<div id="page-content">
+
+    {% include 'component/hostgroups.html' %}
+
+    <div class="panel"  style="float: right;width:69%;">
+        <div class="panel-heading" >
+            <select id="option_type" style="width: 130px;border: 0;cursor: pointer" class="panel-title form-control" onchange="ToggleHide(this)">
+                <option value="put" selected>文件上传</option>
+                <option value="get">文件下载</option>
+            </select>
+        </div>
+        <div class="panel-body">
+{#            <div id="dropzone"></div>#}
+            <input id="remote_path" style="margin:0 0 20px 0" class="form-control" type="text" placeholder="输入路径">
+            <form style="margin-bottom: 20px" class="dropzone dz-clickable">
+                <div class="dz-default dz-message">
+                    <div class="dz-icon icon-wrap icon-circle icon-wrap-md">
+                        <i class="fa fa-cloud-upload fa-3x"></i>
+                    </div>
+                    <div>
+                        <p class="dz-text">Drop files to upload</p>
+                        <p class="text-muted">or click to pick manually</p>
+                    </div>
+                </div>
+            </form>
+            <a onclick="exec_task('file_handler',this)" class="btn btn-default pull-right">执行</a>
+            <a id="upload" class="btn btn-info pull-right">上传</a>
+            <script id="download_file"></script>
+            <a class="btn btn-danger pull-right">终止</a>
+        </div>
+    </div>
+
+    {% include 'component/taskresult.html' %}
+
+</div>
+<!--===================================================-->
+<!--End page content-->
+
+
+{% endblock %}
+{% block content_js %}
+
+    {% include 'component/multitaskjs.html' %}
+    <script src="/static/plugins/dist/dropzone.js"></script>
+    <script>
+        function ToggleHide(self) {
+            if($(self).val() === 'get'){
+                $(".dropzone").addClass('hide');
+                $("#upload").addClass('hide');
+            }else{
+                $(".dropzone").removeClass('hide');
+                $("#upload").removeClass('hide');
+            }
+        }
+
+
+        Dropzone.autoDiscover = false;
+        $(".dropzone").dropzone({
+            url:"{% url 'filehandler' %}",
+            addRemoveLinks:true,
+            autoProcessQueue:false,
+            init:function () {
+                mydropzone = this;
+                $("#upload").click(function () {
+                    mydropzone.processQueue()
+                });
+
+                this.on('success',function (file,data) {
+                    //
+                });
+
+                this.on('complete',function (file,data) {
+{#                    console.log(data)#}
+                });
+
+                this.on('error',function (file,data) {
+                    console.log(data)
+                });
+            }
+
+
+        });
+
+
+    </script>
+
+{% endblock %}
+
+

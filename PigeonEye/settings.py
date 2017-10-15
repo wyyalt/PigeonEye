@@ -128,3 +128,6 @@ SESSION_TRACKER_SCRIPT = os.path.join(BASE_DIR,'Audit/backend/session_tracker.sh
 
 
 MULTI_CMD_SCRIPT = os.path.join(BASE_DIR, 'concurrent_task.py')
+
+FILE_UPLOAD_BASE_PATH = os.path.join(BASE_DIR,'statics','upload')
+FILE_DOWNLOAD_BASE_PATH = os.path.join(BASE_DIR,'statics','download')

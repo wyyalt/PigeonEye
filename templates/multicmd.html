@@ -34,60 +34,21 @@
 <!--Page content-->
 <!--===================================================-->
 <div id="page-content">
-    <div class="panel" style="float: left;width: 30%;">
-        <div class="panel-heading">
-            <h3 class="panel-title">主机组</h3>
-        </div>
-        <div class="panel-body">
-            <!--List Group with Badges-->
-            <!--===================================================-->
-            <ul class="list-group">
-                {% for group in request.user.account.host_groups.all %}
-                    <li class="list-group-item"><input onclick="checkall(this)" type="checkbox"><span style="cursor:pointer;" class="badge badge-primary" onclick="show_host_list(this)">{{ group.host_user_binds.count }}</span>{{ group.name }}</li>
-                    <div style="margin-bottom: 10px;" class="host_bind hide">
-                        {% for host_bind in group.host_user_binds.all %}
-                            <div class="list-group-item" ><input  onclick="get_hosts()"  type="checkbox" value="{{ host_bind.id }}">{{ host_bind.host.ip_addr }}</div>
-                        {% endfor %}
-                    </div>
-                {% endfor %}
-                <li class="list-group-item" onclick="show_host_list(this)"><input onclick="checkall(this)" type="checkbox"> <span style="cursor:pointer;" class="badge badge-primary" onclick="show_host_list(this)">{{ request.user.account.host_user_binds.count }}</span>未分组</li>
-                <div style="margin-bottom: 10px;" class="host_bind hide">
-                    {% for host_bind in request.user.account.host_user_binds.all %}
-                        <div class="list-group-item"><input onclick="get_hosts()" type="checkbox" value="{{ host_bind.id }}">{{ host_bind.host.ip_addr }}</div>
-                    {% endfor %}
-                </div>
-            </ul>
-            <!--===================================================-->
-        </div>
-    </div>
+
+    {% include 'component/hostgroups.html' %}
+
     <div class="panel"  style="float: right;width:69%;">
         <div class="panel-heading" >
             <h3 class="panel-title">命令</h3>
         </div>
         <div class="panel-body">
             <textarea id="task_body" class="form-control"></textarea>
-            <a onclick="exec_cmd('cmd',this)" class="btn btn-info pull-right">执行</a>
+            <a onclick="exec_task('cmd',this)" class="btn btn-info pull-right">执行</a>
             <a class="btn btn-danger pull-right">终止</a>
         </div>
     </div>
-    <div class="panel"  style="float: right;width:69%;">
-        <div class="panel-heading" >
 
-            <div class="panel-title">
-                <span class="col-lg-1 pull-left">执行结果</span>
-                <div class="hide col-lg-11 pull-right ">
-                    <div style="margin-bottom: 0;margin-top: 10px;" class="progress progress-xl">
-                        <div id="percent" style="width: 0" class="progress-bar progress-bar-info"></div>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <div class="panel-body">
-            <div id="cmd_result">
-            </div>
-        </div>
-    </div>
+    {% include 'component/taskresult.html' %}
 
 </div>
 <!--===================================================-->
@@ -96,112 +57,9 @@
 
 {% endblock %}
 {% block content_js %}
-<script>
 
-    function exec_cmd(cmd_type,self) {
-        var $host_binds = get_hosts();
-        if ($host_binds.length === 0){
-            alert("请选择主机！");
-            return false
-        }
+    {% include 'component/multitaskjs.html' %}
 
-        var $task_boby = $("#task_body").val().trim();
-        if ($task_boby.length === 0){
-            //可优化
-            alert("请输入命令！");
-            return false
-        }
-
-        task_info = {
-            'task_type':cmd_type,
-            'host_binds':JSON.stringify($host_binds),
-            'task_body':$task_boby
-        };
-
-        $.post("{% url 'multitask' %}",{
-            'csrfmiddlewaretoken':'{{ csrf_token }}',
-            'task_info':JSON.stringify(task_info)
-
-        },function (data) {
-            //显示进度条
-            $("#percent").parent().parent().removeClass('hide');
-            //获取任务执行结果
-            var task_id = data;
-            task_result(task_id);
-            ret = setInterval(function () {
-                task_result(task_id);
-            },2000)
-        });
-
-    }
-
-    function task_result(task_id){
-
-        $.getJSON("{% url 'taskresult' %}",{'task_id':task_id},function(data){
-            //将结果显示在前台
-            $("#cmd_result").empty();
-            var all_task_finished = true;
-            var finished_count = 0;
-            $.each(data,function (index,result) {
-                var $host_info = $("<p class='form-control'>" +
-                    "任务ID：<span>"+result.task__id+"</span>&nbsp;&nbsp;" +
-                    "IP： <span>"+result.host_user_bind__host__ip_addr+"</span>&nbsp;&nbsp;" +
-                    "执行账户：<span>"+result.host_user_bind__host_user__username+"</span>" +
-                    "</p>");
-                var $pre = $("<pre></pre>");
-                $pre.text(result.result);
-                $("#cmd_result").append($host_info).append($pre);
-
-                //主任务状态标记
-                if(all_task_finished && Number(result.status) !== 0){
-                    all_task_finished = true;
-                }else{
-                    all_task_finished = false
-                }
-
-                //成功主机计数
-                if (Number(result.status) !==0){
-                    finished_count = finished_count + 1;
-                }
-
-            });//end each
-
-            //进度计算
-            var task_percent = parseInt(finished_count / data.length * 100);
-            $("#percent").text("任务进度"+task_percent+'%').css('width',task_percent+"%");
-
-            //验证所有任务是否执行完成
-            if(all_task_finished){
-                clearInterval(ret)
-            }
-
-
-        });//end getJSON
-
-
-    }
-
-
-    function show_host_list(self) {
-        $(self).parent().next().toggleClass('hide')
-    }
-
-    function checkall(self) {
-        $(self).parent().next().find(":checkbox").prop('checked',$(self).prop('checked'));
-        get_hosts()
-    }
-
-    function get_hosts() {
-        $host_bind_list = [];
-        $host_binds = $(".host_bind").find(":checked");
-        $.each($host_binds,function (index,i) {
-            $host_bind_list.push($(i).val())
-        });
-
-        return $host_bind_list
-    }
-
-</script>
 {% endblock %}
 
 

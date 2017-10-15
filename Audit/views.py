@@ -1,10 +1,14 @@
 from django.shortcuts import render,redirect,HttpResponse
 from django.contrib.auth import login,logout,authenticate
 from django.contrib.auth.decorators import login_required
-import json
+from django.views.decorators.csrf import csrf_exempt
+import json,os
+import zipfile
 from Audit import models
 import string,random
 import datetime
+from django.conf import settings
+from wsgiref.util import FileWrapper
 # Create your views here.
 
 @login_required
@@ -69,9 +73,35 @@ def token(request):
 
 @login_required
 def multi_cmd(request):
-    return render(request,'multicmd.html')
+    return render(request, 'multicmd.html')
+
+
+@login_required
+@csrf_exempt
+def file_handler(request):
+    if request.method == "POST":
+
+
+        file_obj = request.FILES.get('file')
+        import os
+        file_abs_path = os.path.join(settings.FILE_UPLOAD_BASE_PATH,str(request.user.id),file_obj.name)
+        if not os.path.isdir(os.path.dirname(file_abs_path)):
+           os.makedirs(os.path.dirname(file_abs_path))
+
+        if not os.path.exists(file_abs_path):
+            with open(file_abs_path,'wb') as f:
+                for chunk in file_obj.chunks():
+                    f.write(chunk)
+
+        response = HttpResponse('success')
+        response.status_code = 200
+        return response
+
+    if request.method == "GET":
+        return render(request, 'filehandler.html')
 
 from Audit.backend import task_handler
+
 
 @login_required
 def multi_task(request):
@@ -95,3 +125,24 @@ def task_result(request):
     )
     print(result_list)
     return HttpResponse(json.dumps(result_list))
+
+@login_required
+def download_file(request):
+    task_id = request.GET.get('task_id')
+
+    zip_file_name = "task-%s-files"%task_id
+
+    archive = zipfile.ZipFile(zip_file_name,'w',zipfile.ZIP_DEFLATED)
+    file_path = os.path.join(settings.FILE_DOWNLOAD_BASE_PATH,str(request.user.id),str(task_id))
+    file_list = os.listdir(file_path)
+
+    for filename in file_list:
+        archive.write('%s/%s'%(file_path,filename),arcname=filename)
+    archive.close()
+
+    wrapper = FileWrapper(open(zip_file_name,'rb'))
+    response = HttpResponse(wrapper,content_type='application/zip')
+    response['Content-Disposition'] = 'attachment; filename=%s.zip'%zip_file_name
+    response['content-Length'] = os.path.getsize(zip_file_name)
+
+    return response
